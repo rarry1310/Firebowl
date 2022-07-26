@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Fire Bowl</title>
+</head>
+<body>
+
+    <!-- NAV -->
+
+    <nav class="nav" id="nav">
+        <div class="logo">
+            <a href="">
+                <i class='bx bxs-hot logoImg' ></i>
+                <span class="logoTile">
+                    fire bowl
+                </span>
+            </a>
+        </div>
+        <div class="navList" id="navList">
+            <ul>
+                <li><a href="#" class="navLink">acasa</a></li>
+                <li><a href="#" class="navLink">despre</a></li>
+                <li><a href="#" class="navLink">produse</a></li>
+                <li><a href="#" class="navLink">instructiuni</a></li>
+                <li><a href="#" class="navLink">contact</a></li>
+            </ul>
+            <div class="closeNav" id="closeNav">
+                <i class='bx bx-x'></i>
+            </div>
+        </div>
+        <div class="navBtns">
+            <i class='bx bx-moon moon'></i>
+            <i class='bx bx-cart-alt openCart' id="openCart"></i>
+            <i class='bx bx-grid-alt openNav' id="openNav"></i>
+        </div>
+    </nav>
+
+    <!-- CART -->
+
+    <div class="showCart" id="showCart">
+        <i class='bx bx-x closeCart' id="closeCart"></i>
+        <h2 class="cartTitle">Cosul meu</h2>
+        <div class="cartContainer">
+            <article class="cartCard">
+                <div class="cartBox">
+                    <img src="./assets/Studio/Studio09.jpg" alt="" class="cartImg">
+                </div>
+                <div class="cartDetails">
+                    <h3 class="cartTitle">Firebowl test 1</h3>
+                    <span class="cartPrice">1000 LEI</span>
+                    <div class="cartAmount">
+                        <div class="cartAmountContent">
+                            <span class="cartAmountBox">
+                                <i class='bx bxs-minus-square' ></i>
+                            </span>
+                            <span class="cartAmountNumber">
+                                1
+                            </span>
+                            <span class="cartAmountBox">
+                                <i class='bx bxs-plus-square' ></i>
+                            </span>
+                        </div>
+                        <i class='bx bxs-trash cartAmountTrash' ></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cartCard">
+                <div class="cartBox">
+                    <img src="./assets/Studio/Studio09.jpg" alt="" class="cartImg">
+                </div>
+                <div class="cartDetails">
+                    <h3 class="cartTitle">Firebowl test 2</h3>
+                    <span class="cartPrice">1000 LEI</span>
+                    <div class="cartAmount">
+                        <div class="cartAmountContent">
+                            <span class="cartAmountBox">
+                                <i class='bx bxs-minus-square' ></i>
+                            </span>
+                            <span class="cartAmountNumber">
+                                1
+                            </span>
+                            <span class="cartAmountBox">
+                                <i class='bx bxs-plus-square' ></i>
+                            </span>
+                        </div>
+                        <i class='bx bxs-trash cartAmountTrash' ></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cartCard">
+                <div class="cartBox">
+                    <img src="./assets/Studio/Studio09.jpg" alt="" class="cartImg">
+                </div>
+                <div class="cartDetails">
+                    <h3 class="cartTitle">Firebowl test 3</h3>
+                    <span class="cartPrice">1000 LEI</span>
+                    <div class="cartAmount">
+                        <div class="cartAmountContent">
+                            <span class="cartAmountBox">
+                                <i class='bx bxs-minus-square' ></i>
+                            </span>
+                            <span class="cartAmountNumber">
+                                1
+                            </span>
+                            <span class="cartAmountBox">
+                                <i class='bx bxs-plus-square' ></i>
+                            </span>
+                        </div>
+                        <i class='bx bxs-trash cartAmountTrash' ></i>
+                    </div>
+                </div>
+            </article>
+
+            <div class="cartPrices">
+                <span class="cartPricesItem">3 obiecte</span>
+                <span class="cartPricesTotal">3000 LEI</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOME -->
+
+    <section class="home">
+        <div class="homeLeft">
+            <div class="socialLinks">
+                <a href="" class="facebook">Facebook</a>
+                <a href="" class="youtube">Youtube</a>
+                <a href="" class="twitter">Twitter</a>
+            </div>
+            <div class="productDescription">
+                <h1 class="homeTitle" id="product">
+                    Fire Bowl
+                </h1>
+                <h3 class="homeSubtitle">
+                    Lorem ipsum dolor sit.
+                </h3>
+                <p class="homeDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sunt.
+                </p>
+                <span class="homePrice">
+                    1000$
+                </span>
+                <div class="homeButtons">
+                    <button class="discover">
+                        Descopera
+                    </button>
+                    <button class="button" id="button">
+                        Adauga in cos
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="homeImg">
+            <img src="./assets/Studio/Studio01.jpg" alt="">
+        </div>
+    </section>
+
+
+
+    <!-- <section class="about">
+        <div class="aboutImg">
+            <img src="./assets/Studio/Studio03.jpg" alt="">
+        </div>
+        <div class="aboutRight">
+            <h2 class="aboutTitle">
+                Povestea noastra
+            </h2>
+            <h4 class="aboutSubtitle">
+                Lorem ipsum dolor sit amet consectetur.
+            </h4>
+            <p class="aboutDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Unde quidem iure aliquam eius, in necessitatibus quis quia similique 
+                maxime vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Unde quidem iure aliquam eius, in necessitatibus quis quia similique 
+                maxime vero?
+            </p>
+            <button class="discover">
+                Descopera
+            </button>
+        </div>
+    </section>
+
+     <section class="products">
+        <h2 class="productsTitle">
+            Produse
+        </h2>
+        <div class="containerProducts">
+            <div class="containerProduct">
+                <img src="./assets/Studio/Studio03.jpg" alt="" class="productImg">
+                <h4 class="productName">
+                    Lorem, ipsum.
+                </h4>
+                <span class="productPrice">
+                    1250$
+                </span>
+                <a href="" class="productAdd active" id="productAdd">
+                    Adauga in cos
+                </a>
+            </div>
+            <div class="containerProduct">
+                <img src="./assets/Studio/Studio05.jpg" alt="" class="productImg">
+                <h4 class="productName">
+                    Lorem, ipsum.
+                </h4>
+                <span class="productPrice">
+                    1250$
+                </span>
+                <a href="" class="productAdd active" id="productAdd">
+                    Adauga in cos
+                </a>
+            </div>
+            <div class="containerProduct">
+                <img src="./assets/Studio/Studio08.jpg" alt="" class="productImg">
+                <h4 class="productName">
+                    Lorem, ipsum.
+                </h4>
+                <span class="productPrice">
+                    1250$
+                </span>
+                <a href="" class="productAdd active" id="productAdd">
+                    Adauga in cos
+                </a>
+            </div>
+            <div class="containerProduct">
+                <img src="./assets/Studio/Studio11.jpg" alt="" class="productImg">
+                <h4 class="productName">
+                    Lorem, ipsum.
+                </h4>
+                <span class="productPrice">
+                    1250$
+                </span>
+                <a href="" class="productAdd active" id="productAdd">
+                    Adauga in cos
+                </a>
+            </div>
+            <div class="containerProduct">
+                <img src="./assets/Studio/Studio07.jpg" alt="" class="productImg">
+                <h4 class="productName">
+                    Lorem, ipsum.
+                </h4>
+                <span class="productPrice">
+                    1250$
+                </span>
+                <a href="" class="productAdd active" id="productAdd">
+                    Adauga in cos
+                </a>    
+            </div>
+            <div class="containerProduct">
+                <img src="./assets/Studio/Studio10.jpg" alt="" class="productImg">
+                <h4 class="productName">
+                    Lorem, ipsum.
+                </h4>
+                <span class="productPrice">
+                    1250$
+                </span>
+                <a href="" class="productAdd active" id="productAdd">
+                    Adauga in cos
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="contact-us">
+        <h2 class="contact-title">
+            Contact
+        </h2>
+        <div class="contact-links">
+            <div class="contact-list">
+                <span class="contact-location">Bucuresti</span>
+                <span class="contact-location">Strada Acvila</span>
+                <span class="contact-location">0749437136</span>
+            </div>
+            <section class="social">
+                <i class='bx bxl-facebook social-link'>Facebook</i>
+                <i class='bx bxl-instagram social-link'>Instagram</i>
+                <i class='bx bxl-youtube social-link'>Youtube</i>
+            </section>
+        </div>
+    </section> -->
+
+    <!-- js -->
+    <script src="./script.js"></script>
+</body>
+</html>
