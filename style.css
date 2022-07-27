@@ -316,9 +316,9 @@ nav {
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple;
     position: relative;
-    right: 100px;
+    right: 100px; */
 }
 
 /* =============== SHOW CART ============= */
