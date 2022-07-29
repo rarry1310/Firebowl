@@ -232,11 +232,10 @@ let decrement = (id) => {
 let update = (id) => {
   let search = cart.find((x) => x.id === id);
   document.getElementById(id).innerHTML = search.item;
-  calculation()
+  console.log(search.item)
 };
 
 
 let calculation =() => {
   let cartTotalItems = document.getElementById("cartPricesItem");
-  cartTotalItems.innerHTML = 100;
 }
