@@ -486,7 +486,7 @@ nav {
     top: -0.625rem;
 }
 
-.containerProducts {
+.shop {
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -495,14 +495,14 @@ nav {
 }
 
 
-.containerProduct {
+.item {
     width: 18.75rem;
     position: relative; 
     border-radius: 0.625rem;
     z-index: 2;
 }
 
-.containerProduct:hover {
+.item:hover {
     box-shadow: 0 0.625rem 1.25rem 0.031rem #A6E8D2;
 }
 
@@ -516,13 +516,13 @@ nav {
 
 .productName,
 .productPrice,
-.productAdd {
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.productAdd {
+.button {
     cursor: pointer;
     background-color: #A6E8D2;
     width: max-content;
@@ -534,9 +534,10 @@ nav {
     position: relative;
     transform: translateY(.5rem);
     opacity: 0;
+    border: none;
 }
 
-.containerProduct:hover .productAdd {
+.item:hover .button {
     transform: translateY(0);
     opacity: 1;
     cursor: pointer;

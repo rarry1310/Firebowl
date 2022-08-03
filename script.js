@@ -61,181 +61,206 @@ if(closeCart) {
 
 
 
-
-
-
-
-
-let containerProducts = document.getElementById("containerProducts");
+let shop = document.getElementById('shop');
+let cart = JSON.parse(localStorage.getItem("data")) || [];
 
 let shopItemsData = [
   {
-    id:"qwerty",
-    img:"./assets/Studio/Studio03.jpg",
+    id:0,
     name:"Firebowl1",
-    price:"1250$"
+    price:100,
+    img:"./assets/Studio/Studio03.jpg"
   },
   {
-    id:"dfgsdfgsdfg",
-    img:"./assets/Studio/Studio07.jpg",
+    id:1,
     name:"Firebowl2",
-    price:"1250$"
+    price:200,
+    img:"./assets/Studio/Studio01.jpg"
   },
   {
-    id:"ghadfgadfg",
-    img:"./assets/Studio/Studio09.jpg",
+    id:2,
     name:"Firebowl3",
-    price:"180$"
+    price:300,
+    img:"./assets/Studio/Studio05.jpg"
   },
   {
-    id:"fgsdfgsdfg",
-    img:"./assets/Studio/Studio01.jpg",
+    id:3,
     name:"Firebowl4",
-    price:"850$"
+    price:100,
+    img:"./assets/Studio/Studio03.jpg"
   },
   {
-    id:"sdfgsdfgdsfg",
-    img:"./assets/Studio/Studio02.jpg",
+    id:4,
     name:"Firebowl5",
-    price:"150$"
+    price:200,
+    img:"./assets/Studio/Studio01.jpg"
   },
   {
-    id:"dfhsdfhsdfh",
-    img:"./assets/Studio/Studio05.jpg",
+    id:5,
     name:"Firebowl6",
-    price:"1250$"
-  }];
+    price:300,
+    img:"./assets/Studio/Studio05.jpg"
+  },
+]
+
+
 
 let generateShop = () => {
-  return (containerProducts.innerHTML= shopItemsData.map((e) => {
-    let{id, name,price,img} = e;
+  return (shop.innerHTML = shopItemsData.map((x) => {
+    let {id, name, price, img} = x;
     return `
-    <div id= productName-id-${id} class="containerProduct">
-      <img src=${img} alt="" class="productImg">
-      <h4 class="productName">
-          ${name}
-      </h4>
-      <span class="productPrice">
-          ${price}
-      </span>
-      <a href="" class="productAdd active" id="productAdd">
-          Adauga in cos
-      </a>
-    </div>
+    <div id=product-id-${id} class="item">
+    <img src=${img} alt="" class="productImg">
+    <h4 class="productName">
+        ${name}
+    </h4>
+    <span class="productPrice">
+      ${price} LEI
+    </span>
+    <button onclick ="addToCart(${id})" class="button active" id="button">
+        Adauga in cos
+    </button>
+  </div>
     `
-  }).join(""));
-};
+  }).join(''));
+}
 
 generateShop();
 
+let addToCart = (id) => {
+  let search = cart.find((e) => e.id === id);
+  if(search === undefined) {
+    cart.push(
+      {
+      id:id,
+      item:1,
+    }
+    );
+  }
+  else {
+    return
+  }
+  console.log(cart)
+
+  localStorage.setItem("data", JSON.stringify(cart));
+};
 
 
-
+//cart products
 
 let cartContainer = document.getElementById('cartContainer');
-
-let cartItemsData = [
-  {
-    id:"iudsifva",
-    img:"./assets/Studio/Studio09.jpg",
-    name:"Firebowl test 1",
-    price:"1000 LEI"
-  },
-  {
-    id:"iudsivatva",
-    img:"./assets/Studio/Studio02.jpg",
-    name:"Firebowl test 2",
-    price:"300 LEI"
-  },
-  {
-    id:"fvavcrc",
-    img:"./assets/Studio/Studio04.jpg",
-    name:"Firebowl test 13",
-    price:"800 LEI"
-  }
-];
-
-let cart = [];
+let label = document.getElementById('label');
 
 let generateCart = () => {
-  return (cartContainer.innerHTML= cartItemsData.map((x) => {
-    let{id, name,price,img} = x;
-    return `
-    <div id=product-id-${id} class="containerProducts" id="containerProducts">
+  if(cart.length !== 0) {
+    return (cartContainer.innerHTML = cart.map((e) => {
+      let {id, item} = e;
+      let search = shopItemsData.find((ee) => ee.id === id) || [];
+
+      return `
       <article class="cartCard">
         <div class="cartBox">
-            <img src="${img}" alt="" class="cartImg">
+            <img src="${search.img}" alt="" class="cartImg">
         </div>
         <div class="cartDetails">
-          <h3 class="cartTitle">${name}</h3>
-          <span class="cartPrice">${price}</span>
+          <h3 class="cartTitle">${search.name}</h3>
+          <span class="cartPrice">${search.price} LEI</span>
           <div class="cartAmount">
             <div class="cartAmountContent">
-                <span class="cartAmountBox">
-                    <i onclick="decrement(${id})" class='bx bxs-minus-square' ></i>
-                </span>
-                <span id=${id} class="cartAmountNumber">
-                    0
-                </span>
-                <span class="cartAmountBox">
-                    <i onclick="increment(${id})" class='bx bxs-plus-square' ></i>
-                </span>
+              <span class="cartAmountBox">
+                  <i onclick="decrement(${id})" class='bx bxs-minus-square' ></i>
+              </span>
+              <span id=${id} class="cartAmountNumber" id="cartAmountNumber">
+                  ${item}
+              </span>
+              <span class="cartAmountBox">
+                  <i onclick="increment(${id})" class='bx bxs-plus-square' ></i>
+              </span>
             </div>
             <i class='bx bxs-trash cartAmountTrash' ></i>
           </div>
         </div>
       </article>
-      <div class="cartPrices">
-        <span class="cartPricesItem" id="cartPricesItem"></span>
-        <span class="cartPricesTotal" id="cartPricesTotal">3000 LEI</span>
-      </div>
-    </div>
+      `
+    }).join(''));
+  }
+  else {
+    cartContainer = ``;
+    label.innerHTML = `
+      <h2>Cosul este gol</h2>
     `
-  }).join(""));
-};
+  }
+}
 
 generateCart();
 
 
-
 let increment = (id) => {
-  let selectedItem = id;
-  let search = cart.find((x) => x.id === selectedItem.id);
+  let search = cart.find((x) => x.id === id);
 
-
-  if(search === undefined) {
+  if (search === 1) {
     cart.push({
-      id: selectedItem.id,
-      item:1,
+      id: id,
+      item: 1,
     });
-  }
-  else {
+  } else {
     search.item += 1;
-  };
-
-  update(selectedItem.id);
+  }
+  update(id);
+  localStorage.setItem("data", JSON.stringify(cart));
 };
 
 let decrement = (id) => {
-  let selectedItem = id;
-  let search = cart.find((x) => x.id === selectedItem.id);
+  let search = cart.find((x) => x.id === id);
 
-  if(search.item === 0)
-    return;  
+  if (search === undefined)
+    return;
+  else if (search.item === 0)
+    return;
   else {
     search.item -= 1;
   }
-
-  update(selectedItem.id);
+  update(id);
+  cart = cart.filter((x) => x.item !== 0);
+  localStorage.setItem("data", JSON.stringify(cart));
 };
 
 let update = (id) => {
   let search = cart.find((x) => x.id === id);
+  console.log(search.item);
   document.getElementById(id).innerHTML = search.item;
-  console.log(search.item)
+  // calculation();
 };
 
+// let cartPrices = document.getElementById('cartPrices')
 
-let calculation =() => {
-  let cartTotalItems = document.getElementById("cartPricesItem");
-}
+// let calculation = () => {
+//   let cartIcon = document.getElementById("cartPrices");
+//   cartIcon.innerHTML = cart.map((x) => x.item).reduce((x, y) => x + y, 0);
+// };
+
+// calculation();
+
+let removeItem = (id) => {
+  cart = cart.filter((x) => x.id !== id);
+  generateCartItems();
+  localStorage.setItem("data", JSON.stringify(cart));
+};
+
+let TotalAmount = () => {
+  if (cart.length !== 0) {
+    let amount = cart
+      .map((x) => {
+        let { item, id } = x;
+        let search = shopItemsData.find((y) => y.id === id) || [];
+
+        return item * search.price;
+      })
+      .reduce((x, y) => x + y, 0);
+    label.innerHTML = `
+    <span class="cartPricesTotal" id="cartPricesTotal">${amount} LEI</span>
+    `;
+  } else return;
+};
+
+TotalAmount();
