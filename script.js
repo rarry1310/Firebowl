@@ -1,7 +1,7 @@
 //NAV SCROLL STICKY
 
 let nav = document.getElementById('nav');
-let alert = document.getElementById("add-to-cart-alert");
+let alert = document.getElementById("alert");
 
 window.onscroll = function() {
 
@@ -13,9 +13,7 @@ window.onscroll = function() {
     }
 }
 
-function dismissAlert() {
-    alert.classList.add("d-none");
-}
+
 
 
 // SHOW/HIDE MENU
@@ -53,15 +51,17 @@ let openCart = document.getElementById('openCart');
 
 if (openCart) {
     openCart.addEventListener('click', () => {
-        showCart.classList.add('showCartClass');
+        showCart.classList.toggle('showCartClass');
     })
 }
+
 
 if (closeCart) {
     closeCart.addEventListener('click', () => {
         showCart.classList.remove('showCartClass');
-    })
+    })    
 }
+
 
 
 
@@ -159,10 +159,16 @@ let generateShop = () => {
 
 generateShop();
 
-function addToCart(id) {
-    alert.classList.remove("d-none");
-    let search = cart.find((e) => e.id === id);
 
+function addToCart(id) {
+    //ADD ALERT ON ADD  TO CART BUTTON
+    alert.classList.add("alert-fade");
+    setTimeout(function () {
+        alert.classList.remove("alert-fade");
+    }, 1500);
+    
+
+    let search = cart.find((e) => e.id === id);
     if (search === undefined) {
         cart.push({
             id: id,
@@ -175,34 +181,35 @@ function addToCart(id) {
     generateCart();
 }
 
+
+
 //cart products
 
 let cartContainer = document.getElementById('cartContainer');
 let label = document.getElementById('label');
 
 function createCartCard(id, item, search) {
-    console.log("creating cart card")
     let newItem = `<article class="cartCard">
         <div class="cartBox">
             <img src="${search.img}" alt="" class="cartImg">
         </div>
         <div class="cartDetails">
-          <h3 class="cartTitle">${search.name}</h3>
-          <span class="cartPrice">${item * search.price} LEI</span>
-          <div class="cartAmount">
-            <div class="cartAmountContent">
-              <span class="cartAmountBox">
-                  <i onclick="decrement(${id})" class='bx bxs-minus-square' ></i>
-              </span>
-              <span id=${id} class="cartAmountNumber" id="cartAmountNumber">
-                  ${item}
-              </span>
-              <span class="cartAmountBox">
-                  <i onclick="increment(${id})" class='bx bxs-plus-square' ></i>
-              </span>
+            <h3 class="product-title">${search.name}</h3>
+            <span class="cartPrice">${item * search.price} LEI</span>
+            <div class="cartAmount">
+                <div class="cartAmountContent">
+                <span class="cartAmountBox">
+                    <i onclick="decrement(${id})" class='bx bxs-minus-square' ></i>
+                </span>
+                <span id=${id} class="cartAmountNumber" id="cartAmountNumber">
+                    ${item}
+                </span>
+                <span class="cartAmountBox">
+                    <i onclick="increment(${id})" class='bx bxs-plus-square' ></i>
+                </span>
+                </div>
+                <i class='bx bxs-trash cartAmountTrash' ></i>
             </div>
-            <i class='bx bxs-trash cartAmountTrash' ></i>
-          </div>
         </div>
       </article>`;
 
@@ -216,7 +223,7 @@ function generateCart() {
             let { id, item } = cartItem;
             let shopItem = shopItemsData.find((shopItem) => shopItem.id === id) || [];
             return createCartCard(id, item, shopItem);
-        }).join(",");
+        }).join("");
         cartContainer.innerHTML = article;
     } else {
         cartContainer.innerHTML = `<h2>Cosul este gol</h2>`;

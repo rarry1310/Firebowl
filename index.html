@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="./style.css">
     <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>Fire Bowl</title>
 </head>
 <body>
@@ -19,8 +17,8 @@
     <nav class="nav" id="nav">
         <div class="logo">
             <a href="">
-                <i class='bx bxs-hot logoImg' ></i>
-                <span class="logoTile">
+                <i class='bx bxs-hot logo-img' ></i>
+                <span class="logo-tile">
                     fire bowl
                 </span>
             </a>
@@ -44,19 +42,22 @@
         </div>
     </nav>
 
-    <div class="alert alert-warning alert-fixed alert-dismissible text-center d-none fade show alert-width" id="add-to-cart-alert" role="alert">
-        Produs adaugat!
-        <button type="button" class="btn-close" onclick="dismissAlert()" aria-label="Close"></button>
+    <!-- ALERT ADD TO CART -->
+
+    <div class="alert" id="alert">
+        <h1 class="alert-title">Produs adaugat!</h1>
     </div>
 
     <!-- CART -->
 
-    <!-- <div class="showCart" id="showCart">
-        <i class='bx bx-x closeCart' id="closeCart"></i>
-        <h2 class="cartTitle scrolled">Cosul meu</h2>
-        <div class="cartContainer" id="cartContainer"> -->
+    <div class="showCart" id="showCart">
+        <div class="cart-top scrolled">
+            <h2 class="cartTitle">Cosul meu</h2>
+            <i class='bx bx-x closeCart' id="closeCart"></i>
+        </div>
+        <div class="cartContainer" id="cartContainer">
             <!-- ADDED FROM JS -->
-            <!-- <label class="label" id="label" for="">
+            <label class="label" id="label" for="">
                 Cosul este gol
             </label>
 
@@ -65,48 +66,44 @@
                 <span class="cartPricesTotal" id="cartPricesTotal">3000 LEI</span>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- HOME -->
 
     <section class="home">
-        <div class="homeLeft">
-            <div class="socialLinks">
-                <a href="" class="facebook">Facebook</a>
-                <a href="" class="youtube">Youtube</a>
-                <a href="" class="twitter">Twitter</a>
-            </div>
-            <div class="productDescription">
-                <h1 class="homeTitle" id="product">
-                    Fire Bowl
-                </h1>
-                <h3 class="homeSubtitle">
-                    Lorem ipsum dolor sit.
-                </h3>
-                <p class="homeDescription">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sunt.
-                </p>
-                <span class="homePrice">
-                    1000$
-                </span>
-                <div class="homeButtons">
-                    <button class="discover">
-                        Descopera
-                    </button>
-                    <button class="button-home" id="button">
-                        Adauga in cos
-                    </button>
-                </div>
+        <div class="socialLinks">
+            <a href="" class="facebook">Facebook</a>
+            <a href="" class="youtube">Youtube</a>
+            <a href="" class="twitter">Twitter</a>
+        </div>
+        <div class="productDescription">
+            <h1 class="homeTitle" id="product">
+                Fire Bowl
+            </h1>
+            <h3 class="homeSubtitle">
+                Lorem ipsum dolor sit.
+            </h3>
+            <p class="homeDescription">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sunt.
+            </p>
+            <span class="homePrice">
+                1000$
+            </span>
+            <div class="homeButtons">
+                <button class="discover">
+                    Descopera
+                </button>
+                <button class="button-home" id="button">
+                    Adauga in cos
+                </button>
             </div>
         </div>
-        <div class="homeImg">
-            <img src="./assets/Studio/Studio01.jpg" alt="">
-        </div>
+        <img class="homeImg" src="./assets/Studio/Studio01.jpg" alt="">
     </section>
 
 
 
-    <!-- <section class="about">
+    <section class="about">
         <div class="aboutImg">
             <img src="./assets/Studio/Studio03.jpg" alt="">
         </div>
@@ -134,9 +131,9 @@
         <h2 class="productsTitle">
             Produse
         </h2>
-        <div class="shop" id="shop"> -->
+        <div class="shop" id="shop">
             <!-- ADDED FROM JS -->
-        <!-- </div>
+        </div>
     </section>
 
     <section class="contact-us">
@@ -155,7 +152,7 @@
                 <i class='bx bxl-youtube social-link'>Youtube</i>
             </section>
         </div>
-    </section> -->
+    </section>
 
     <!-- js -->
     <script src="./script.js"></script>
