@@ -1,0 +1,131 @@
+@media screen and (max-width:1600px) {
+    body {
+        margin: 0 22rem !important;
+    }
+}
+
+
+@media screen and (max-width:1500px) {
+    body {
+        margin: 0 19rem !important;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    body {
+        margin: 0 15rem !important;
+    }
+
+    .showCart {
+        width: 100vw !important;
+    }
+
+    .cart-top {
+        justify-content: center !important;
+    }
+
+    .cartTitle {
+        margin-right: 3rem !important;
+        position: relative !important;
+        left: -1rem !important;
+    }
+
+    .cartAmountTrash {
+        position: relative !important;
+        left: -1rem !important;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    body {
+        margin: 0 12rem !important;
+    }
+}
+
+@media screen and (max-width:1150px) {
+    body {
+        margin: 0 9rem !important;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    body {
+        margin: 0 6rem !important;
+    }
+}
+
+@media screen and (max-width:950px) {
+    body {
+        margin: 0 3rem !important;
+    }
+}
+
+@media screen and (max-width:850px) {
+    body {
+        margin: 0 1rem !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navList {
+        position: fixed !important;
+        background-color: #fff !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 6rem 2rem 3.5rem !important;
+        transition: .5s !important;
+        z-index: 100 !important;
+    }
+
+    .navList ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        row-gap: 2rem !important;
+    }
+
+    .navList ul li:not(:last-child) {
+        margin-right: 0 !important;
+    }
+
+    .navBtns .openNav {
+        display: initial !important;
+    }
+
+    .closeNav {
+        opacity: 1 !important;
+        pointer-events: initial !important;
+    }
+    
+    .home {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .social-links {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .homeImg {
+        grid-row-start: 1;
+        grid-column-start: 2;
+        display: flex;
+        margin: auto;
+        width: 80%;
+    }
+
+    .productDescription {
+        /* margin-top: 1.5rem !important; */
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        grid-column-start: 2;
+    }
+}
