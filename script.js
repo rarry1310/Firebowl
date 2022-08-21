@@ -2,6 +2,7 @@
 
 let nav = document.getElementById('nav');
 let alert = document.getElementById("alert");
+let cartIcon = document.getElementById("openCart")
 
 window.onscroll = function() {
 
@@ -25,12 +26,14 @@ let navLink = document.getElementsByClassName('navLink');
 if (openNav) {
     openNav.addEventListener('click', () => {
         navList.classList.add('showMenu');
+        cartIcon.classList.add('none')
     })
 }
 
 if (closeNav) {
     closeNav.addEventListener('click', () => {
         navList.classList.remove('showMenu');
+        cartIcon.classList.remove('none')
     })
 }
 

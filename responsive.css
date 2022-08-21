@@ -66,17 +66,22 @@
     }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1720px) {
+    .img2 {
+        display: none;
+    }
+}
+
 @media screen and (max-width:768px) {
     .navList {
-        position: fixed !important;
+        position: fixed;
         background-color: #fff !important;
-        top: 0 !important;
-        right: -100% !important;
-        width: 100% !important;
-        height: 100% !important;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
         padding: 6rem 2rem 3.5rem !important;
         transition: .5s !important;
-        z-index: 100 !important;
     }
 
     .navList ul {
@@ -116,11 +121,10 @@
         grid-column-start: 2;
         display: flex;
         margin: auto;
-        width: 80%;
+        width: 50%;
     }
 
     .productDescription {
-        /* margin-top: 1.5rem !important; */
         display: flex;
         flex-direction: column;
         margin: auto;
@@ -128,4 +132,42 @@
         text-align: center;
         grid-column-start: 2;
     }
+
+    .homeButtons {
+        margin-top: .5rem;
+    }
+
+    .aboutRight {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-start: 1;
+        margin-right: 0;
+    }
+
+    
+
+    .about {
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .homeImg {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    /* .homeImg {
+        width: 80%;
+    } */
+
+    .img1,
+    .img2 {
+        width: 250px !important;
+        margin-left: 0 !important;
+    }
+
+
 }
