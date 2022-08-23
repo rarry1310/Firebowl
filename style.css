@@ -1,11 +1,11 @@
 /* google font */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 /* =============== SHOW MENU ============= */
@@ -20,12 +20,13 @@
     right: 0 !important;
 }
 
-/* =============== HIDE/SHOW CART BUTTON AND SOCIAL LINKS ============= */
 
-.none {
-    visibility: hidden;
-    transition: ease-in-out .2s;
+.old-price {
+    text-decoration: line-through;
 }
+
+
+/* =============== HIDE/SHOW CART BUTTON AND SOCIAL LINKS ============= */
 
 li {
     list-style-type: none !important;
@@ -50,7 +51,7 @@ a {
     width: max-content;
     padding: .3rem;
     background-color: rgba(143, 143, 68, 0.952);
-    z-index: 20;
+    z-index: 10;
     
 }
 
@@ -74,7 +75,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 5rem;
-    border-radius: 0.313rem;
     position: sticky;
     top: 0;
 }
@@ -82,8 +82,8 @@ nav {
 .scrolled {
     background-color: #fff;
     box-shadow: 0 0.5rem 0.625rem -0.625rem #000;
-    z-index: 100;
     transition: .5s;
+    z-index: 2;
 }
 
 .logo {
@@ -95,7 +95,13 @@ nav {
 }
 
 .logo-img {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
+    width: 200px;
+}
+
+.navList {
+    position: relative;
+    z-index: 2;
 }
 
 .navList ul {
@@ -139,7 +145,7 @@ nav {
 
 .openCart {
     position: relative;
-    z-index: 0;
+    /* z-index: 0; */
 }
 
 .navBtns .openNav {
@@ -192,7 +198,7 @@ nav {
     position: sticky;
     top: 0;
     cursor: pointer;
-    z-index: 20;
+    /* z-index: 20; */
 }
 
 .cartCard {
@@ -270,9 +276,15 @@ nav {
 
 /* =============== HOME ============= */
 
+
+.z-index {
+    z-index: -1 !important;
+}
+
+
 .home {
     display: grid;
-    grid-template-columns: 20% 40% 40%;
+    grid-template-columns: 20% 80%;
     height: max-content;
     align-items: center;
     height: 20rem;
@@ -280,55 +292,82 @@ nav {
 
 .social-links {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 3rem;
     position: relative;
     transform: rotate(-90deg);
-    font-weight: bolder;
-    z-index: 0;
     place-self: center;
 }
 
-.homeImg {
-    width: 250px;
+.social-links a {
+    font-size: 24px;
+    font-weight: 700;
 }
 
-.homeTitle {
-    margin-bottom: .5rem;
-}
-
-.homeSubtitle,
-.homeDescription,
-.homePrice {
-    margin-bottom: .3rem;
-    color: rgba(27, 27, 27, 0.822);
-}
-
-.homePrice {
-    font-weight: 900;
-    color: rgb(27, 27, 27);
-    border-radius: 5px;
-    padding: .5rem;
-    color: rgb(57, 54, 54);
-}
-
-.homeButtons {
+.banner {
+    background: rgb(233,113,16);
+    background: linear-gradient(142deg, rgba(233,113,16,1) 0%, rgba(116,121,128,1) 100%);
+    border-radius: 7px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: 30% 70%;
+    height: 100%;
+    cursor: pointer;
 }
 
-.discover, 
-.add {
+.price-reduced {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.old-price-banner,
+.new-price {
+    font-size: 32px;
+    font-weight: 700;
+    transform: rotate(-20deg);
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+}
+
+.old-price {
+    color: rgb(116,121,128);
+    box-shadow: 0 0 30px 2px #747980;
+}
+
+.new-price {
+    box-shadow: 0 0 20px 2px #fff;
+}
+
+.button-banner {
+    padding:10px;
     border: none;
-    padding: .5rem .8rem;
-    border-radius: 5px;
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 0 0.625rem 0.125rem gray;
-    z-index: 1;
-    cursor: pointer;
+    background-color: transparent;
+
+}
+
+.banner-right {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 20% 70%;
+    place-items: center;
+}
+
+.banner-title {
+    font-size: 32px;
+    font-weight: 600    ;
+}
+
+.banner-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerImg {
+    width: 450px;
+    position: relative;
 }
 
 /* =============== ABOUT ============= */
@@ -344,7 +383,6 @@ nav {
 .aboutImg img {
     width: 300px;
     border-radius: 7px;
-    /* margin-left: .5rem; */
 }
 
 .aboutRight {
@@ -364,6 +402,7 @@ nav {
 
 .aboutTitle {
     position: relative;
+    z-index: -1;
 }
 
 .aboutTitle:before {
@@ -384,7 +423,7 @@ nav {
 }
 
 
-/* ---------------------------------------------------------------- */
+/* =============== SHOP ============= */
 
 .productsTitle {
     display: flex;
@@ -403,30 +442,30 @@ nav {
 }
 
 .shop {
-    margin-top: 5rem;
+    margin-top: 4rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 5rem;
     place-items: center;
 }
 
 .item {
-    width: 18.75rem;
     position: relative;
-    border-radius: 0.625rem;
-    z-index: 2;
+    border-radius: 20px;
 }
 
 .item:hover {
-    box-shadow: 0 0.625rem 1.25rem 0.031rem #A6E8D2;
+    box-shadow: 0 0 30px 5px #000000;
 }
 
 .productImg {
-    width: 100%;
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    margin: auto;
 }
 
 .productName,
@@ -439,12 +478,15 @@ nav {
 
 .button {
     cursor: pointer;
-    background-color: #A6E8D2;
+    background-color: #000000;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
     width: max-content;
     display: flex;
     margin: auto;
     padding: .5rem 2rem;
-    border-radius: 0.313rem 0.313rem 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
     transition: .5s;
     position: relative;
     transform: translateY(.5rem);
@@ -507,7 +549,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: .3rem;
     font-size: 1rem;
 }
 
@@ -524,3 +565,16 @@ nav {
 768px: iPads, Tablets
 992px: Small screens, laptops
 1200px: Desktops, large screens*/
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow,
+.right-arrow {
+    color: #000;
+    font-size: 40px;
+    cursor: pointer;
+}

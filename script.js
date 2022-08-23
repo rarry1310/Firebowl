@@ -14,26 +14,26 @@ window.onscroll = function() {
     }
 }
 
-
+let socialLink = document.querySelector('.social-links');
 
 
 // SHOW/HIDE MENU
 
-let navList = document.getElementById('navList');
+let navList = document.getElementById('navList');   
 let openNav = document.getElementById('openNav');
 let closeNav = document.getElementById('closeNav');
 let navLink = document.getElementsByClassName('navLink');
 if (openNav) {
     openNav.addEventListener('click', () => {
         navList.classList.add('showMenu');
-        cartIcon.classList.add('none')
+        socialLink.classList.add('z-index');
     })
 }
 
 if (closeNav) {
     closeNav.addEventListener('click', () => {
         navList.classList.remove('showMenu');
-        cartIcon.classList.remove('none')
+        socialLink.classList.remove('z-index');
     })
 }
 
@@ -74,70 +74,58 @@ let cart = JSON.parse(localStorage.getItem("data")) || [];
 
 let shopItemsData = [{
         id: 0,
-        name: "Firebowl1",
+        name: "black & black",
         price: 100,
-        img: "./assets/Studio/Studio03.jpg"
+        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
     },
     {
         id: 1,
-        name: "Firebowl2",
+        name: "tropical",
         price: 200,
-        img: "./assets/Studio/Studio01.jpg"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 2,
         name: "Firebowl3",
         price: 300,
-        img: "./assets/Studio/Studio05.jpg"
+        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
     },
     {
         id: 3,
         name: "Firebowl4",
         price: 100,
-        img: "./assets/Studio/Studio03.jpg"
+        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
     },
     {
         id: 4,
         name: "Firebowl5",
         price: 200,
-        img: "./assets/Studio/Studio01.jpg"
+        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
     },
     {
         id: 5,
         name: "Firebowl6",
         price: 300,
-        img: "./assets/Studio/Studio05.jpg"
+        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
     },
     {
-      id: 6,
-      name: "Firebowl2",
-      price: 200,
-      img: "./assets/Studio/Studio01.jpg"
-  },
-  {
-      id: 7,
-      name: "Firebowl3",
-      price: 300,
-      img: "./assets/Studio/Studio05.jpg"
-  },
-  {
-      id: 8,
-      name: "Firebowl4",
-      price: 100,
-      img: "./assets/Studio/Studio03.jpg"
-  },
-  {
-      id: 9,
-      name: "Firebowl5",
-      price: 200,
-      img: "./assets/Studio/Studio01.jpg"
-  },
-  {
-      id: 10,
-      name: "Firebowl6",
-      price: 300,
-      img: "./assets/Studio/Studio05.jpg"
-  }
+        id: 3,
+        name: "Firebowl4",
+        price: 100,
+        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+    },
+    {
+        id: 4,
+        name: "Firebowl5",
+        price: 200,
+        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+    },
+    {
+        id: 5,
+        name: "Firebowl6",
+        price: 300,
+        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+    }
 ]
 
 let generateShop = () => {
@@ -145,17 +133,18 @@ let generateShop = () => {
         let { id, name, price, img } = x;
         return `
     <div id=product-id-${id} class="item">
-    <img src=${img} alt="" class="productImg">
-    <h4 class="productName">
-        ${name}
-    </h4>
-    <span class="productPrice">
-      ${price} LEI
-    </span>
-    <button onclick ="addToCart(${id})" class="button active" id="button">
-        Adauga in cos
-    </button>
-  </div>
+        <img src=${img} alt="" class="productImg">
+        <h4 class="productName">
+            ${name}
+        </h4>
+        <span class="productPrice">
+            <h1 class="old-price">1000 LEI</h1>
+            ${price} LEI
+        </span>
+        <button onclick ="addToCart(${id})" class="button active discover" id="button">
+            Adauga in cos
+        </button>
+    </div>
     `
     }).join(''));
 }
