@@ -14,9 +14,6 @@ window.onscroll = function() {
     }
 }
 
-let socialLink = document.querySelector('.social-links');
-
-
 // SHOW/HIDE MENU
 
 let navList = document.getElementById('navList');   
@@ -26,14 +23,12 @@ let navLink = document.getElementsByClassName('navLink');
 if (openNav) {
     openNav.addEventListener('click', () => {
         navList.classList.add('showMenu');
-        socialLink.classList.add('z-index');
     })
 }
 
 if (closeNav) {
     closeNav.addEventListener('click', () => {
         navList.classList.remove('showMenu');
-        socialLink.classList.remove('z-index');
     })
 }
 

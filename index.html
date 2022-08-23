@@ -16,16 +16,14 @@
     <!-- NAV -->
 
     <nav class="nav" id="nav">
-        <div class="logo">
-            <img src="./assets/logo/FIREBOWL_PNG.png" alt="" class="logo-img">
-        </div>
+        <img src="./assets/logo/FIREBOWL_PNG.png" alt="" class="logo-img">
         <div class="navList" id="navList">
             <ul>
-                <li><a href="#" class="navLink">acasa</a></li>
-                <li><a href="#" class="navLink">despre</a></li>
-                <li><a href="#" class="navLink">produse</a></li>
-                <li><a href="#" class="navLink">instructiuni</a></li>
-                <li><a href="#" class="navLink">contact</a></li>
+                <li><a href="#home" class="navLink active">acasa</a></li>
+                <li><a href="#info" class="navLink">despre</a></li>
+                <li><a href="#products" class="navLink">produse</a></li>
+                <li><a href="#instructions" class="navLink">instructiuni</a></li>
+                <li><a href="#contact" class="navLink">contact</a></li>
             </ul>
             <div class="closeNav" id="closeNav">
                 <i class='bx bx-x'></i>
@@ -66,12 +64,11 @@
 
     <!-- HOME -->
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="social-links">
             <a href="https://web.facebook.com/FIREBOWL.RO/" class="social-link">Facebook</a>
             <a href="https://www.instagram.com/firebowl_ro/" class="social-link">Instagram</a>
         </div>
-
         <div class="banner" id="banner">
             <div class="price-reduced">
                 <p class="old-price old-price-banner">1000 LEI</p>
@@ -84,38 +81,103 @@
                 <p class="banner-title">
                     Primele 30 reducere 40%
                 </p>
-                <div class="banner-img">
-                    <img src="./assets/Studio/Design_fără_titlu-removebg-preview.png" alt="" class="bannerImg">
-                    
-                </div>
+                <img src="./assets/Studio/Design_fără_titlu-removebg-preview.png" alt="" class="bannerImg bannerImgNormal">
+                <img src="./assets/Studio/WhatsApp_Image_2022-08-23_at_14.03.17-removebg-preview.png" alt="" class="bannerImg bannerImgSmallPhone">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="info" id="info">
+        <div class="about">
+            <div class="aboutImg">
+                <img class="img" src="./assets/Natura/Photo16.jpg" alt="">
+            </div>
+            <div class="aboutRight">
+                <h2 class="aboutTitle">
+                    Povestea noastra
+                </h2>
+                <p class="aboutDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, velit?  
+                </p>
+                <button class="about-discover discover">
+                    Descopera
+                </button>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutRight">
+                <h2 class="aboutTitle">
+                    Despre bol
+                </h2>
+                <p class="aboutDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, velit? 
+                </p>
+                <button class="about-discover discover">
+                    Descopera
+                </button>
+            </div>
+            <div class="aboutImg">
+                <img class="img img-right" src="./assets/Natura/Photo14.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutImg">
+                <img class="img" src="./assets/Natura/Photo12.jpg" alt="">
+            </div>
+            <div class="aboutRight">
+                <h2 class="aboutTitle">
+                    Despre arzator
+                </h2>
+                <p class="aboutDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, velit? 
+                </p>
+                <button class="about-discover discover">
+                    Descopera
+                </button>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutRight">
+                <h2 class="aboutTitle">
+                    Despre pietre
+                </h2>
+                <p class="aboutDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, velit?  
+                </p>
+                <button class="about-discover discover">
+                    Descopera
+                </button>
+            </div>
+            <div class="aboutImg">
+                <img class="img img-right" src="./assets/Natura/Photo17.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutImg">
+                <img class="img" src="./assets/Natura/Photo11.jpg" alt="">
+            </div>
+            <div class="aboutRight">
+                <h2 class="aboutTitle">
+                    Despre doze
+                </h2>
+                <p class="aboutDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, velit?  
+                </p>
+                <button class="about-discover discover">
+                    Descopera
+                </button>
             </div>
         </div>
         
     </section>
 
-    <!-- ABOUT -->
-
-    <section class="about">
-        <div class="aboutImg">
-            <img class="img1" src="./assets/Natura/Photo16.jpg" alt="">
-            <img src="./assets/Natura/Photo25.jpg" alt="" class="img2">
-        </div>
-        <div class="aboutRight">
-            <h2 class="aboutTitle">
-                Povestea noastra
-            </h2>
-            <p class="aboutDescription">
-                Noul șemineu portabil cu bioetanol, produs 100% românesc cu 
-                focarul manufacturat din oțel inoxidabil,  este obiectul dumneavoastră 
-                decorativ care va impresiona prietenii la petreceri și va încălzi serile lungi de vară. 
-            </p>
-            <button class="about-discover discover">
-                Descopera
-            </button>
-        </div>
-    </section>
-
-     <section class="products" id="products">
+    <!-- <section class="products" id="products">
         <h2 class="productsTitle">
             Produse
         </h2>
@@ -123,14 +185,14 @@
             <i class='bx bxs-chevron-left left-arrow' ></i>
             <div class="shop" id="shop">
                 
-                <!-- ADDED FROM JS -->
+                
                 
             </div>
             <i class='bx bxs-chevron-right right-arrow'></i>
         </div>
-    </section>
+    </section> -->
 
-    <section class="contact-us">
+    <!-- <section class="contact-us">
         <h2 class="contact-title">
             Contact
         </h2>
@@ -146,7 +208,7 @@
                 <i class='bx bxl-youtube social-link'>Youtube</i>
             </section>
         </div>
-    </section>
+    </section> -->
 
     <!-- js -->
     <script src="./script.js"></script>
