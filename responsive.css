@@ -60,6 +60,19 @@
     }
 }
 
+@media screen and (min-width:840px) {
+    .aboutImg {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .right {
+        justify-content: flex-end;
+    }
+}
+
+
+
 @media screen and (max-width:840px) {
     /* nav */
     .navList {
