@@ -466,12 +466,30 @@ nav {
 }
 
 .shop {
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1.5rem;
     column-gap: 5rem;
     place-items: center;
+}
+
+.shop::-webkit-scrollbar {
+    display: none;
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-arrow,
+.right-arrow {
+    color: #000;
+    font-size: 40px;
+    cursor: pointer;
+    display: none !important;
 }
 
 .item {
@@ -591,15 +609,3 @@ nav {
 992px: Small screens, laptops
 1200px: Desktops, large screens*/
 
-.products-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left-arrow,
-.right-arrow {
-    color: #000;
-    font-size: 40px;
-    cursor: pointer;
-}

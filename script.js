@@ -67,11 +67,12 @@ if (closeCart) {
 let shop = document.getElementById('shop');
 let cart = JSON.parse(localStorage.getItem("data")) || [];
 
-let shopItemsData = [{
+let shopItemsData = [
+    {
         id: 0,
         name: "black & black",
         price: 100,
-        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 1,
@@ -83,43 +84,43 @@ let shopItemsData = [{
         id: 2,
         name: "Firebowl3",
         price: 300,
-        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 3,
-        name: "Firebowl4",
+        name: "black & black",
         price: 100,
-        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 4,
-        name: "Firebowl5",
+        name: "tropical",
         price: 200,
-        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 5,
-        name: "Firebowl6",
+        name: "Firebowl3",
         price: 300,
-        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
-        id: 3,
-        name: "Firebowl4",
+        id: 6,
+        name: "black & black",
         price: 100,
-        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
-        id: 4,
-        name: "Firebowl5",
+        id: 7,
+        name: "tropical",
         price: 200,
-        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
-        id: 5,
-        name: "Firebowl6",
+        id: 8,
+        name: "Firebowl3",
         price: 300,
-        img: "./assets/Studio/Studio01-removebg-preview-removebg-preview.png"
+        img: "./assets/Studio/Studio11.jpg"
     }
 ]
 
@@ -145,6 +146,96 @@ let generateShop = () => {
 }
 
 generateShop();
+
+
+// let shopItemsData1 = [
+// {
+//     id: 3,
+//     name: "Firebowl4",
+//     price: 100,
+//     img: "./assets/Studio/Studio11.jpg"
+// },
+// {
+//     id: 4,
+//     name: "Firebowl5",
+//     price: 200,
+//     img: "./assets/Studio/Studio11.jpg"
+// },
+// {
+//     id: 5,
+//     name: "Firebowl6",
+//     price: 300,
+//     img: "./assets/Studio/Studio11.jpg"
+// }
+// ]
+
+// let generateShop1 = () => {
+//     return (shop.innerHTML = shopItemsData1.map((x) => {
+//         let { id, name, price, img } = x;
+//         return `
+//     <div id=product-id-${id} class="item">
+//         <img src=${img} alt="" class="productImg">
+//         <h4 class="productName">
+//             ${name}
+//         </h4>
+//         <span class="productPrice">
+//             <h1 class="old-price">1000 LEI</h1>
+//             ${price} LEI
+//         </span>
+//         <button onclick ="addToCart(${id})" class="button active discover" id="button">
+//             Adauga in cos
+//         </button>
+//     </div>
+//     `
+//     }).join(''));
+// }
+
+// generateShop1();
+
+
+// let shopItemsData2 = [
+// {
+//     id: 3,
+//     name: "Firebowl4",
+//     price: 100,
+//     img: "./assets/Studio/Studio11.jpg"
+// },
+// {
+//     id: 4,
+//     name: "Firebowl5",
+//     price: 200,
+//     img: "./assets/Studio/Studio11.jpg"
+// },
+// {
+//     id: 5,
+//     name: "Firebowl6",
+//     price: 300,
+//     img: "./assets/Studio/Studio11.jpg"
+// }
+// ]
+
+// let generateShop2 = () => {
+// return (shop2.innerHTML = shopItemsData.map((x) => {
+//     let { id, name, price, img } = x;
+//     return `
+// <div id=product-id-${id} class="item">
+//     <img src=${img} alt="" class="productImg">
+//     <h4 class="productName">
+//         ${name}
+//     </h4>
+//     <span class="productPrice">
+//         <h1 class="old-price">1000 LEI</h1>
+//         ${price} LEI
+//     </span>
+//     <button onclick ="addToCart(${id})" class="button active discover" id="button">
+//         Adauga in cos
+//     </button>
+// </div>
+// `
+// }).join(''));
+// }
+
+// generateShop2();
 
 
 function addToCart(id) {
@@ -290,3 +381,21 @@ let TotalAmount = () => {
 };
 
 TotalAmount();
+
+
+
+// PRODUCTS SLIDER
+
+let productsContainer = document.getElementById('products-container');
+let buttonLeft = document.getElementById('left-arrow');
+let buttonRight = document.getElementById('right-arrow');
+
+buttonLeft.addEventListener('click', () => {
+    shop.scrollLeft -= 280;
+    console.log("dada")
+})
+
+buttonRight.addEventListener('click', () => {
+    shop.scrollLeft += 280;
+    console.log("nunu")
+})
