@@ -399,3 +399,24 @@ buttonRight.addEventListener('click', () => {
     shop.scrollLeft += 280;
     console.log("nunu")
 })
+
+
+
+
+
+
+function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var aboutMoreButton = document.getElementById("about-more-button");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      aboutMoreButton.innerHTML = "Mai mult"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      aboutMoreButton.innerHTML = "Mai putin"; 
+      moreText.style.display = "inline";
+    }
+  }

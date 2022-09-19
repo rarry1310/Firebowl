@@ -421,7 +421,20 @@ nav {
     color: rgba(27, 27, 27, 0.622);
     font-weight: 900;
     text-align: center;
+    margin: 0 2rem;
 }
+
+.btn-color {
+    background-color: #e97110 !important;
+    box-shadow: 0 0 10px 1px #e97110 !important;
+}
+
+.btn-color:hover {
+    background-color: #747980 !important;
+    box-shadow: 0 0 10px 1px #747980 !important;
+}
+
+#more {display: none;};
 
 .aboutTitle {
     position: relative;
