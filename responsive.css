@@ -170,7 +170,6 @@
     .banner {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        /* clip-path: polygon(11% 0, 88% 0, 100% 11%, 70% 100%, 32% 100%, 0 13%); */
     }
 
     .old-price-banner,

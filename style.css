@@ -68,10 +68,6 @@ a {
     visibility: visible;
 }
 
-body {
-    margin: 0rem 25rem; 
-}
-
 /* =============== NAV ============= */
 
 nav {
@@ -119,8 +115,8 @@ nav {
 .closeNav {
     font-size: 2rem;
     position: absolute;
-    top: 1.5rem;
-    right: 1.1rem;
+    top: 1.3rem;
+    right: 1.6rem;
     opacity: 0;
     pointer-events: none;
     cursor: pointer;
@@ -164,8 +160,8 @@ nav {
     position: fixed;
     background-color: #fff;
     z-index: 5;
-    width: 20rem;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     top: 0;
     right: -100%;
     transition: ease-in-out .5s;
@@ -175,9 +171,8 @@ nav {
 
 .cart-top {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 100%;
     height: 5rem;
     position: sticky;
     top: 0;
@@ -197,7 +192,14 @@ nav {
     position: sticky;
     top: 0;
     cursor: pointer;
-    /* z-index: 20; */
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .cartCard {
@@ -221,7 +223,9 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
 }
 
 .cartDetails {
@@ -295,7 +299,7 @@ nav {
 
 .banner {
     background: rgb(233,113,16);
-    background: linear-gradient(142deg, rgba(233,113,16,1) 0%, rgba(116,121,128,1) 100%);
+    background: linear-gradient(150deg, rgba(233,113,16,1) 0%, rgba(116,121,128,1) 80%);
     border-radius: 7px;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -321,8 +325,8 @@ nav {
 }
 
 .old-price {
-    color: rgb(116,121,128);
-    box-shadow: 0 0 30px 2px #747980;
+    color: #fff;
+    box-shadow: 0 0 30px 2px #fff;
 }
 
 .new-price {
@@ -333,7 +337,6 @@ nav {
     padding:10px;
     border: none;
     background-color: transparent;
-
 }
 
 .banner-right {
@@ -345,7 +348,8 @@ nav {
 
 .banner-title {
     font-size: 32px;
-    font-weight: 600    ;
+    font-weight: 600;
+    color: #fff;
 }
 
 .banner-img{
@@ -361,6 +365,7 @@ nav {
 
 .bannerImgSmallPhone {
     width: 250px !important;
+    display: none;
 }
 
 /* =============== ABOUT ============= */
@@ -369,16 +374,8 @@ nav {
     margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    row-gap: 2rem;
-    column-gap: 2rem;
-    margin-bottom: 5rem;
-}
-
-.about {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    border-radius: 5px;
-    box-shadow: 0 0 5px 2px rgba(116,121,128,1);
+    row-gap: 1rem;
+    column-gap: 1rem;
 }
 
 .about-first {
@@ -386,21 +383,49 @@ nav {
     grid-column-end: 3;
     display: flex;
     justify-content: center;
+    box-shadow: 0 0 5px 2px rgba(116,121,128,1);
 }
 
-.aboutImg {
-    display: flex;
-    height: 160px;
+.about-left {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(116,121,128,1);
 }
 
-.aboutImg img {
-    height: 100%;
-    border-radius: 0 5px 5px 0;
-} 
+.about-right {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(116,121,128,1);
+}
 
-.aboutImg .img-right {
-    display: flex;
-    flex-direction: row-reverse;    
+.right1 {
+    background-image: url(./assets/Natura/Photo14.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left1 {
+    background-image: url(./assets/Natura/Photo12.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right2 {
+    background-image: url(./assets/Natura/Photo21.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left2 {
+    background-image: url(./assets/Natura/Photo11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .aboutRight {
@@ -409,11 +434,6 @@ nav {
     align-items: center;
     justify-content: center;
     margin: auto;
-}
-
-.aboutSubtitle {
-    margin-top: .3rem;
-    color: rgba(27, 27, 27, 0.822);
 }
 
 .aboutDescription {
