@@ -482,6 +482,10 @@ nav {
 
 /* =============== SHOP ============= */
 
+.products {
+    margin-top: 5rem;
+}
+
 .productsTitle {
     display: flex;
     align-items: center;
@@ -499,22 +503,16 @@ nav {
 }
 
 .shop {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 1.5rem;
-    column-gap: 5rem;
+    row-gap: 2rem;
+    column-gap: 2.5rem;
     place-items: center;
 }
 
 .shop::-webkit-scrollbar {
     display: none;
-}
-
-.products-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .left-arrow,
@@ -531,11 +529,11 @@ nav {
 }
 
 .item:hover {
-    box-shadow: 0 0 30px 5px #000000;
+    box-shadow: 0 0 15px 2px #000000;
 }
 
 .productImg {
-    width: 250px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;

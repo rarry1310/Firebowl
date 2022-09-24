@@ -46,6 +46,17 @@
         left: 31.5rem;
     }
     /* END CART */
+
+    /* PRODUCTS */
+
+    .shop {
+        row-gap: 1.5rem;
+    }
+
+    .productImg {
+        width: 200px;
+    }
+    /* END PRODUCTS */
 }
 
 
@@ -124,7 +135,7 @@
 
     .bannerImgSmallPhone {
         display: initial;
-        width: 470px !important;
+        width: 400px !important;
     }
 
     .home {
@@ -138,6 +149,21 @@
 
     /* INFO */
 
+    .aboutFirstDescription {
+        margin: 0 1rem !important;
+    }
+
+    .aboutDescription {
+        margin: 0;
+    }
+    /* END INFO */
+
+    /* PRODUCTS */
+
+    .shop {
+        column-gap: 1.5rem;
+    }
+    /* END PRODUCTS */
 }
 
 
@@ -236,6 +262,22 @@
     }
 
     /* END INFO */
+
+    /* PRODUCTS */
+
+    .products-container {
+        display: flex;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        display: initial !important;
+    }
+
+    .products {
+        overflow: hidden;
+    }
+    /* END PRODUCTS */
 }
 
 
