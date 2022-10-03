@@ -577,66 +577,73 @@ nav {
 /* ---------------------------------------------------------------- */
 
 .contact-us {
+    display: flex;
+    justify-content: space-between;
     margin-top: 3rem;
-    width: 100%;
+    font-size: 1.1rem;
+}
+
+.contact-left {
     display: flex;
     flex-direction: column;
 }
 
-.contact-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-location:not(:last-child) {
+    margin-bottom: 1rem;
 }
 
-.contact-links {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.contact-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-list span {
-    margin-right: .8rem;
-}
-
-.contact-location {
+.contact-center,
+.contact-right {
     display: flex;
     flex-direction: column;
-    margin-top: .3rem;
-    font-size: 1rem;
 }
 
-.social {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
+.terms,
+.retur,
 .social-link {
+    margin-bottom: 1rem;
+}
+
+/* TERMS AND CONDITIONS */
+
+.termsAndConditions {
+    padding: 2rem;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60vh;
+    overflow-y: scroll;
+    margin: auto;
+    border: 2px solid black;
+    z-index: 20;
+}
+
+.termsAndConditions p,
+.termsAgree,
+.termsButtons {
+    margin-top: 1rem;
+}
+
+.termsAgree {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+}
+
+.termsButtons {
+    display: flex;
     justify-content: space-around;
+}
+
+.termsButton {
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #747980;
+    color: #fff;
     font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
 }
-
-.social-links .social-link:hover {
-    color: #e97110 !important;
-}
-
-
-
-
-/* BREAKPOINTS */
-
-
-/* 600px: Mobile devices
-768px: iPads, Tablets
-992px: Small screens, laptops
-1200px: Desktops, large screens*/
-
