@@ -319,14 +319,22 @@ function myFunction() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
     var aboutMoreButton = document.getElementById("about-more-button");
-  
+
     if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      aboutMoreButton.innerHTML = "Mai mult"; 
-      moreText.style.display = "none";
+        dots.style.display = "inline";
+        aboutMoreButton.innerHTML = "Mai mult"; 
+        moreText.style.display = "none";
     } else {
-      dots.style.display = "none";
-      aboutMoreButton.innerHTML = "Mai putin"; 
-      moreText.style.display = "inline";
+        dots.style.display = "none";
+        aboutMoreButton.innerHTML = "Mai putin"; 
+        moreText.style.display = "inline";
     }
-  }
+}
+
+
+let terms = document.getElementById("terms");
+let termsAndConditions = document.getElementById('termsAndConditions');
+
+terms.addEventListener('click', () => {
+    termsAndConditions.classList.add('display-initial');
+});

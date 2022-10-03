@@ -88,7 +88,7 @@ nav {
 }
 
 .logo-img {
-    width: 125px;
+    height: 100%;
 }
 
 .navList {
@@ -574,7 +574,7 @@ nav {
 }
 
 
-/* ---------------------------------------------------------------- */
+/* =============== CONTACT US ============= */
 
 .contact-us {
     display: flex;
@@ -602,6 +602,7 @@ nav {
 .retur,
 .social-link {
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 /* TERMS AND CONDITIONS */
@@ -609,7 +610,7 @@ nav {
 .termsAndConditions {
     padding: 2rem;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -618,7 +619,11 @@ nav {
     overflow-y: scroll;
     margin: auto;
     border: 2px solid black;
-    z-index: 20;
+    display: none;
+}
+
+.display-initial {
+    display: initial;
 }
 
 .termsAndConditions p,
@@ -646,4 +651,8 @@ nav {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+}
+
+.termsButton:hover {
+    background-color: #e97110;
 }
