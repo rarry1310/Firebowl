@@ -71,55 +71,55 @@ let shopItemsData = [
     {
         id: 0,
         name: "black & black",
-        price: 100,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 1,
         name: "tropical",
-        price: 200,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 2,
         name: "Firebowl3",
-        price: 300,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 3,
         name: "black & black",
-        price: 100,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 4,
         name: "tropical",
-        price: 200,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 5,
         name: "Firebowl3",
-        price: 300,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 6,
         name: "black & black",
-        price: 100,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 7,
         name: "tropical",
-        price: 200,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 8,
         name: "Firebowl3",
-        price: 300,
+        price: 600,
         img: "./assets/Studio/Studio11.jpg"
     }
 ]
@@ -134,7 +134,7 @@ let generateShop = () => {
             ${name}
         </h4>
         <span class="productPrice">
-            <h1 class="old-price">1000 LEI</h1>
+            <h1 class="old-price-cart">1000 LEI</h1>
             ${price} LEI
         </span>
         <button onclick ="addToCart(${id})" class="button active discover" id="button">
@@ -301,12 +301,12 @@ let buttonLeft = document.getElementById('left-arrow');
 let buttonRight = document.getElementById('right-arrow');
 
 buttonLeft.addEventListener('click', () => {
-    shop.scrollLeft -= 280;
+    shop.scrollLeft -= 200;
     console.log("dada")
 })
 
 buttonRight.addEventListener('click', () => {
-    shop.scrollLeft += 280;
+    shop.scrollLeft += 200;
     console.log("nunu")
 })
 

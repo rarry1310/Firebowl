@@ -265,8 +265,13 @@
 
     /* PRODUCTS */
 
+    .shop {
+        overflow: hidden;
+    }
+
     .products-container {
         display: flex;
+        align-items: center;
     }
 
     .left-arrow,

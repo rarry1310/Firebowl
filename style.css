@@ -241,6 +241,12 @@ nav {
     margin-bottom: 1.5rem;
 }
 
+.old-price-cart {
+    color: red;
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+
 .cartAmount,
 .cartAmountContent {
     display: flex;
