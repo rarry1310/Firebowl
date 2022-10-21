@@ -266,12 +266,14 @@
     /* PRODUCTS */
 
     .shop {
+        grid-template-rows: repeat(1, 1fr) !important;
         overflow: hidden;
     }
 
     .products-container {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     .left-arrow,

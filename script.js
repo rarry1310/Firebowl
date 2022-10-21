@@ -144,7 +144,6 @@ let generateShop = () => {
     `
     }).join(''));
 }
-
 generateShop();
 
 
@@ -200,7 +199,6 @@ function createCartCard(id, item, search) {
             </div>
         </div>
       </article>`;
-
     return newItem;
 }
 
@@ -256,17 +254,7 @@ let update = (id) => {
     let search = cart.find((x) => x.id === id);
     console.log(search.item);
     document.getElementById(id).innerHTML = search.item;
-    // calculation();
 };
-
-// let cartPrices = document.getElementById('cartPrices')
-
-// let calculation = () => {
-//   let cartIcon = document.getElementById("cartPrices");
-//   cartIcon.innerHTML = cart.map((x) => x.item).reduce((x, y) => x + y, 0);
-// };
-
-// calculation();
 
 let removeItem = (id) => {
     cart = cart.filter((x) => x.id !== id);
@@ -301,12 +289,12 @@ let buttonLeft = document.getElementById('left-arrow');
 let buttonRight = document.getElementById('right-arrow');
 
 buttonLeft.addEventListener('click', () => {
-    shop.scrollLeft -= 200;
+    shop.scrollLeft -= 250;
     console.log("dada")
 })
 
 buttonRight.addEventListener('click', () => {
-    shop.scrollLeft += 200;
+    shop.scrollLeft += 250;
     console.log("nunu")
 })
 
@@ -332,9 +320,9 @@ function myFunction() {
 }
 
 
-let terms = document.getElementById("terms");
-let termsAndConditions = document.getElementById('termsAndConditions');
+// let terms = document.getElementById("terms");
+// let termsAndConditions = document.getElementById('termsAndConditions');
 
-terms.addEventListener('click', () => {
-    termsAndConditions.classList.add('display-initial');
-});
+// terms.addEventListener('click', () => {
+//     termsAndConditions.classList.add('display-initial');
+// });
