@@ -195,7 +195,7 @@ function createCartCard(id, item, search) {
                     <i onclick="increment(${id})" class='bx bxs-plus-square' ></i>
                 </span>
                 </div>
-                <i class='bx bxs-trash cartAmountTrash' ></i>
+                <i onclick = "cartAmountTrash(${id})" class='bx bxs-trash cartAmountTrash'></i>
             </div>
         </div>
       </article>`;
@@ -250,16 +250,21 @@ let decrement = (id) => {
     generateCart();
 };
 
+// let cartAmountTrash = (id) => {
+//     let data = localStorage.getItem('data');
+//     let cart = JSON.parse(data);
+//     let index = cart.findIndex(x => x.id === id);
+//     cart.splice(index,1);
+    
+//     update(id);
+//     cart = cart.filter((x) => x.item !== 0);
+//     localStorage.setItem("data", JSON.stringify(cart));
+//     generateCart();
+// }
+
 let update = (id) => {
     let search = cart.find((x) => x.id === id);
-    console.log(search.item);
     document.getElementById(id).innerHTML = search.item;
-};
-
-let removeItem = (id) => {
-    cart = cart.filter((x) => x.id !== id);
-    generateCartItems();
-    localStorage.setItem("data", JSON.stringify(cart));
 };
 
 let TotalAmount = () => {
