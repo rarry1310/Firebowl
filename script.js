@@ -229,7 +229,7 @@ let increment = (id) => {
     } else {
         search.item += 1;
     }
-    update(id);
+    //update(id);
     localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
 };
@@ -244,23 +244,18 @@ let decrement = (id) => {
     } else {
         search.item -= 1;
     }
-    update(id);
+    //update(id);
     cart = cart.filter((x) => x.item !== 0);
     localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
 };
 
-// let cartAmountTrash = (id) => {
-//     let data = localStorage.getItem('data');
-//     let cart = JSON.parse(data);
-//     let index = cart.findIndex(x => x.id === id);
-//     cart.splice(index,1);
+let cartAmountTrash = (id) => {
+    let index = cart.findIndex(x => x.id === id);
+    cart.splice(index, 1);
     
-//     update(id);
-//     cart = cart.filter((x) => x.item !== 0);
-//     localStorage.setItem("data", JSON.stringify(cart));
-//     generateCart();
-// }
+    generateCart();
+}
 
 let update = (id) => {
     let search = cart.find((x) => x.id === id);
