@@ -229,7 +229,7 @@ let increment = (id) => {
     } else {
         search.item += 1;
     }
-    //update(id);
+    
     localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
 };
@@ -244,7 +244,7 @@ let decrement = (id) => {
     } else {
         search.item -= 1;
     }
-    //update(id);
+    
     cart = cart.filter((x) => x.item !== 0);
     localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
@@ -256,11 +256,6 @@ let cartAmountTrash = (id) => {
     
     generateCart();
 }
-
-let update = (id) => {
-    let search = cart.find((x) => x.id === id);
-    document.getElementById(id).innerHTML = search.item;
-};
 
 let TotalAmount = () => {
     if (cart.length !== 0) {
