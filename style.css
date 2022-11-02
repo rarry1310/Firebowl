@@ -287,6 +287,15 @@ nav {
     justify-content: space-between;
 }
 
+.submit-order {
+    display: flex;
+    margin: 3rem auto;
+    padding: 1rem .5rem;
+    background-color: transparent;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
 /* =============== HOME ============= */
 .home {
     display: grid;

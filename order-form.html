@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style-form.css">
+    <title>Formular comanda</title>
+</head>
+<body>
+    <div class="main-block">
+        <form action="/">
+            <div class="info">
+                <input class="fname" type="text" name="name" placeholder="Nume">
+                <input type="text" name="name" placeholder="Email">
+                <input type="text" name="name" placeholder="Numar de telefon">
+                <input type="text" name="name" placeholder="Adresa">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="casuta" id="casuta" onclick="submitOrder()"><span>Sunt de acord cu <a href="termeni.html">Termeni si conditii</a></span>
+            </div>
+            <button type="submit" id="submit" href="/" disabled="disabled">Trimite comanda</button>
+            <button class="submit-back" onclick="window.location.replace('index.html')">Inapoi</button>
+        </form>
+    </div>
+
+    <!-- js -->
+    <script>
+        function submitOrder() {
+            let casuta = document.getElementById('casuta');
+            let submit = document.getElementById('submit');
+
+            if(casuta.checked) {
+                document.getElementById("submit").disabled = true;
+            } else {
+                document.getElementById("submit").disabled = false;
+            }
+        }
+
+        submit.onclick = alertSubmit();
+
+        function alertSubmit() {
+            if(document.getElementById("submit").disabled = true) {
+                alert("Bifeaza termenii coaie!")
+            }
+        }
+        
+    </script>
+</body>
+</html>

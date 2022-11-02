@@ -254,6 +254,7 @@ let cartAmountTrash = (id) => {
     let index = cart.findIndex(x => x.id === id);
     cart.splice(index, 1);
     
+    localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
 }
 
@@ -274,7 +275,6 @@ let TotalAmount = () => {
 };
 
 TotalAmount();
-
 
 
 // PRODUCTS SLIDER
@@ -313,11 +313,3 @@ function myFunction() {
         moreText.style.display = "inline";
     }
 }
-
-
-// let terms = document.getElementById("terms");
-// let termsAndConditions = document.getElementById('termsAndConditions');
-
-// terms.addEventListener('click', () => {
-//     termsAndConditions.classList.add('display-initial');
-// });

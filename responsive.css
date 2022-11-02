@@ -13,7 +13,7 @@
 
     .cartContainer {
         align-items: center;
-        height: 93vh;
+        height: max-content;
     }
 
     .closeCart {
@@ -36,7 +36,6 @@
 
     .cartContainer {
         align-items: center;
-        height: 90vh;
     }
 
     .closeCart {
@@ -115,7 +114,6 @@
     /* CART */
     .cartContainer {
         align-items: center;
-        height: 85vh;
     }
 
     .closeCart {
@@ -225,7 +223,6 @@
     /* CART */
     .cartContainer {
         align-items: center;
-        height: 85vh;
     }
 
     .closeCart {
@@ -321,9 +318,6 @@
 /* 375px */
 @media screen and (max-width:375px) {
     /* CART */
-    .cartContainer {
-        height: 85vh;
-    }
 
     .closeCart {
         position: relative;
@@ -381,7 +375,6 @@
     /* CART */
     .cartContainer {
         align-items: center;
-        height: 85vh;
     }
 
     .closeCart {
