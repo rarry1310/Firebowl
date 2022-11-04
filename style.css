@@ -68,6 +68,9 @@ a {
     visibility: visible;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 /* =============== NAV ============= */
 
 nav {
@@ -600,9 +603,19 @@ nav {
 
 .contact-us {
     display: flex;
-    justify-content: space-between;
-    margin: 3rem 13rem;
+    justify-content: space-around;
+    margin-top: 3rem;
     font-size: 1.1rem;
+    position: relative;
+}
+
+.contact-us:before {
+    content: "";
+    height: 0.188rem;
+    width: 80%;
+    background: #6B6762;
+    position: absolute;
+    top: -0.625rem;
 }
 
 .contact-left,
@@ -611,6 +624,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .contact-location:not(:last-child) {

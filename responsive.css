@@ -58,7 +58,7 @@
     /* CONTACT */
 
     .contact-us {
-        margin: 3rem 9rem;
+        margin-top: 3rem;
     }
 
     /* END CONTACT */
@@ -173,7 +173,18 @@
     /*  CONTACT */
 
     .contact-us {
+        display: flex;
+        flex-direction: column;
         margin: 3rem 3rem;
+    }
+
+    .contact-us:before {
+        width: 100%;
+    }
+
+    .contact-left,
+    .contact-center {
+        margin-bottom: 3rem;
     }
 
     /* END CONTACT */
@@ -207,6 +218,11 @@
 
     .navList ul li:not(:last-child) {
         margin-right: 0;
+    }
+
+    .shop {
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .showMenu {

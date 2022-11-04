@@ -72,37 +72,37 @@ let shopItemsData = [
         id: 0,
         name: "black & black",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio01.jpg"
     },
     {
         id: 1,
         name: "tropical",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio03.jpg"
     },
     {
         id: 2,
         name: "Firebowl3",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio05.jpg"
     },
     {
         id: 3,
         name: "black & black",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio07.jpg"
     },
     {
         id: 4,
         name: "tropical",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio08.jpg"
     },
     {
         id: 5,
         name: "Firebowl3",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio10.jpg"
     },
     {
         id: 6,
@@ -114,13 +114,13 @@ let shopItemsData = [
         id: 7,
         name: "tropical",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio12.jpg"
     },
     {
         id: 8,
         name: "Firebowl3",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio13.jpg"
     }
 ]
 
@@ -279,19 +279,19 @@ TotalAmount();
 
 // PRODUCTS SLIDER
 
-let productsContainer = document.getElementById('products-container');
-let buttonLeft = document.getElementById('left-arrow');
-let buttonRight = document.getElementById('right-arrow');
+// let productsContainer = document.getElementById('products-container');
+// let buttonLeft = document.getElementById('left-arrow');
+// let buttonRight = document.getElementById('right-arrow');
 
-buttonLeft.addEventListener('click', () => {
-    shop.scrollLeft -= 250;
-    console.log("dada")
-})
+// buttonLeft.addEventListener('click', () => {
+//     shop.scrollLeft -= 250;
+//     console.log("dada")
+// })
 
-buttonRight.addEventListener('click', () => {
-    shop.scrollLeft += 250;
-    console.log("nunu")
-})
+// buttonRight.addEventListener('click', () => {
+//     shop.scrollLeft += 250;
+//     console.log("nunu")
+// })
 
 
 
