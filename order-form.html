@@ -9,17 +9,20 @@
 </head>
 <body>
     <div class="main-block">
-        <form action="/">
+        <form action="https://formsubmit.co/trandafir.rares@gmail.com" method="POST">
             <div class="info">
+                <input type="hidden" name="_captcha" value="false">
                 <input class="fname" type="text" name="name" placeholder="Nume">
-                <input type="text" name="name" placeholder="Email">
-                <input type="text" name="name" placeholder="Numar de telefon">
-                <input type="text" name="name" placeholder="Adresa">
+                <input type="email" name="email" placeholder="Email">
+                <input type="hidden" name="_autoresponse" value="Va multumim pentru comanda. Veti fi contactat in cel mai scurt timp pentru finalizarea acesteia">
+                <input type="text" name="phone" placeholder="Numar de telefon">
+                <input type="text" name="address" placeholder="Adresa">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">
             </div>
             <div class="checkbox">
                 <input type="checkbox" name="casuta" id="casuta" onclick="submitOrder()"><span>Sunt de acord cu <a href="termeni.html">Termeni si conditii</a></span>
             </div>
-            <button type="submit" id="submit" href="/" disabled="disabled">Trimite comanda</button>
+            <button type="submit">Trimite comanda</button>
             <button class="submit-back" onclick="window.location.replace('index.html')">Inapoi</button>
         </form>
     </div>

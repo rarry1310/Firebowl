@@ -531,7 +531,7 @@ nav {
     margin-top: 1.5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 2rem;
+    row-gap: 1rem;
     column-gap: 2.5rem;
     place-items: center;
 }

@@ -78,37 +78,37 @@ let shopItemsData = [
         id: 1,
         name: "tropical",
         price: 600,
-        img: "./assets/Studio/Studio03.jpg"
+        img: "./assets/Studio/Studio05.jpg"
     },
     {
         id: 2,
         name: "Firebowl3",
         price: 600,
-        img: "./assets/Studio/Studio05.jpg"
+        img: "./assets/Studio/Studio03.jpg"
     },
     {
         id: 3,
         name: "black & black",
         price: 600,
-        img: "./assets/Studio/Studio07.jpg"
+        img: "./assets/Studio/Studio10.jpg"
     },
     {
         id: 4,
         name: "tropical",
         price: 600,
-        img: "./assets/Studio/Studio08.jpg"
+        img: "./assets/Studio/Studio07.jpg"
     },
     {
         id: 5,
         name: "Firebowl3",
         price: 600,
-        img: "./assets/Studio/Studio10.jpg"
+        img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 6,
         name: "black & black",
         price: 600,
-        img: "./assets/Studio/Studio11.jpg"
+        img: "./assets/Studio/Studio08.jpg"
     },
     {
         id: 7,
