@@ -63,7 +63,30 @@
         <button class="submit-order" onclick="window.location.replace('order-form.html')">
             Finalizeaza comanda
         </button>
+
+        <div class="main-block">
+            <form action="https://formsubmit.co/trandafir.rares@gmail.com" method="POST">
+                <div class="info1">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input class="fname" type="text" name="name" placeholder="Nume">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="hidden" name="_autoresponse" value="Va multumim pentru comanda. Veti fi contactat in cel mai scurt timp pentru finalizarea acesteia">
+                    <input type="text" name="Numar telefon" placeholder="Numar de telefon">
+                    <input type="text" name="address" placeholder="Adresa">
+                    <input type="hidden" value="" id="cartProducts" name="Produse">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="casuta" id="casuta" onclick="submitOrder()"><span>Sunt de acord cu <a href="termeni.html">Termeni si conditii</a></span>
+                </div>
+                <button type="submit">Trimite comanda</button>
+                <button class="submit-back" onclick="window.location.replace('index.html')">Inapoi</button>
+            </form>
+        </div>
+
+
     </div>
+    
 
     <!-- HOME -->
 

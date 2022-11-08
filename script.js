@@ -192,7 +192,7 @@ function createCartCard(id, item, search) {
                     ${item}
                 </span>
                 <span class="cartAmountBox">
-                    <i onclick="increment(${id})" class='bx bxs-plus-square' ></i>
+                    <i onclick="increment(${id})" class='bx bxs-plus-square pluss' ></i>
                 </span>
                 </div>
                 <i onclick = "cartAmountTrash(${id})" class='bx bxs-trash cartAmountTrash'></i>
@@ -232,6 +232,7 @@ let increment = (id) => {
     
     localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
+    addProductsToForm();
 };
 
 let decrement = (id) => {
@@ -248,6 +249,7 @@ let decrement = (id) => {
     cart = cart.filter((x) => x.item !== 0);
     localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
+    addProductsToForm();
 };
 
 let cartAmountTrash = (id) => {
@@ -256,6 +258,7 @@ let cartAmountTrash = (id) => {
     
     localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
+    addProductsToForm();
 }
 
 let TotalAmount = () => {
@@ -277,26 +280,6 @@ let TotalAmount = () => {
 TotalAmount();
 
 
-// PRODUCTS SLIDER
-
-// let productsContainer = document.getElementById('products-container');
-// let buttonLeft = document.getElementById('left-arrow');
-// let buttonRight = document.getElementById('right-arrow');
-
-// buttonLeft.addEventListener('click', () => {
-//     shop.scrollLeft -= 250;
-//     console.log("dada")
-// })
-
-// buttonRight.addEventListener('click', () => {
-//     shop.scrollLeft += 250;
-//     console.log("nunu")
-// })
-
-
-
-
-
 
 function myFunction() {
     var dots = document.getElementById("dots");
@@ -313,3 +296,48 @@ function myFunction() {
         moreText.style.display = "inline";
     }
 }
+
+
+
+
+
+// function submitOrder() {
+//     let casuta = document.getElementById('casuta');
+//     let submit = document.getElementById('submit');
+
+//     if(casuta.checked) {
+//         document.getElementById("submit").disabled = true;
+//     } else {
+//         document.getElementById("submit").disabled = false;
+//     }
+// }
+
+// submit.onclick = alertSubmit();
+
+// function alertSubmit() {
+//     if(document.getElementById("submit").disabled = true) {
+//         alert("Bifeaza termenii coaie!")
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function addProductsToForm () {
+    let someProducts = localStorage.getItem('data');
+    document.getElementById('cartProducts').value = someProducts;
+}
+
+addProductsToForm();
