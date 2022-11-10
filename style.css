@@ -42,7 +42,7 @@ a {
     color: #101010 !important;
 }
 
-.alert {
+.alert-message {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,13 +197,13 @@ nav {
     cursor: pointer;
 }
 
-.label {
+/* .label {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     font-weight: 500;
-}
+} */
 
 .cartCard {
     display: flex;
@@ -703,7 +703,11 @@ nav {
     color: red;
 }
 
+
+/* CART FORM */
+
 .main-block {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -772,7 +776,7 @@ option {
     color: #85d6de;
 }
 
-.btn-item, button {
+.btn-item {
     padding: 10px 5px;
     margin-top: 20px;
     border-radius: 5px; 
@@ -789,6 +793,7 @@ option {
     margin: 20px 5px 0;
 }
 
-button:hover, .btn-item:hover {
-    background: #85d6de;
+.terms-form {
+    color: rgb(64, 64, 238) !important;
+    text-decoration: underline !important;
 }

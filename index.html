@@ -38,14 +38,14 @@
 
     <!-- ALERT ADD TO CART -->
 
-    <div class="alert" id="alert">
+    <div class="alert-message" id="alertMessage">
         <h1 class="alert-title">Produs adaugat!</h1>
     </div>
 
     <!-- CART -->
 
     <div class="showCart" id="showCart">
-        <div class="cart-top scrolled">
+        <div class="cart-top scrolled" id="cartTop">
             <h2 class="cartTitle">Cosul meu</h2>
             <i class='bx bx-x closeCart' id="closeCart"></i>
         </div>
@@ -60,11 +60,11 @@
                 <span class="cartPricesTotal" id="cartPricesTotal"></span>
             </div>
         </div>
-        <button class="submit-order" onclick="window.location.replace('order-form.html')">
-            Finalizeaza comanda
+        <button class="submit-order" id="submit-order" disabled="disabled">
+            Formular comanda
         </button>
 
-        <div class="main-block">
+        <div class="main-block" id="main-block">
             <form action="https://formsubmit.co/trandafir.rares@gmail.com" method="POST">
                 <div class="info1">
                     <input type="hidden" name="_captcha" value="false">
@@ -77,14 +77,12 @@
                     <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">
                 </div>
                 <div class="checkbox">
-                    <input type="checkbox" name="casuta" id="casuta" onclick="submitOrder()"><span>Sunt de acord cu <a href="termeni.html">Termeni si conditii</a></span>
+                    <input type="checkbox" name="checkbox" id="checkbox" onclick="validate()"><span>Sunt de acord cu <a href="terms.html" class="terms-form">Termeni si conditii</a></span>
                 </div>
-                <button type="submit">Trimite comanda</button>
-                <button class="submit-back" onclick="window.location.replace('index.html')">Inapoi</button>
+                <button type="submit" class="last-order-submit" id="lastOrderSubmit" disabled="disabled">Trimite comanda</button>
+                <button type="button" class="submit-back" id="submit-back">Inapoi</button>
             </form>
         </div>
-
-
     </div>
     
 
@@ -138,7 +136,7 @@
                     <br>
                     Bineînțeles, drumul nostru până aici nu a fost ușor, însă a meritat pe deplin tot efortul pentru a crea un produs fabricat 100% în Romania de care suntem foarte mândri.</span>
                 </p>
-                <button class="about-discover btn-color" onclick="myFunction()" id="about-more-button">Mai mult</button>
+                <button class="about-discover btn-color" onclick="seeMore()" id="about-more-button">Mai mult</button>
             </div>
         </div>
 
@@ -150,9 +148,6 @@
                 <p class="aboutDescription">
                     Șemineu Portabil, fabricat în întregime în România, alimentat prin Combustibil ecologic, fără emisii de fum sau miros 
                 </p>
-                <button class="about-discover discover">
-                    Descopera
-                </button>
             </div>
             <div class="right1">
                
@@ -170,9 +165,6 @@
                 <p class="aboutDescription">
                     Ansamblu realizat din otel inoxidabil, cu interior din vată ceramică, dispozitiv de alimentare și suport radial pentru pietre decorative. 
                 </p>
-                <button class="about-discover discover">
-                    Descopera
-                </button>
             </div>
         </div>
 
@@ -184,9 +176,6 @@
                 <p class="aboutDescription">
                     Pietre Decorative in doua culori, Negru lucios si Alb Thassos. Acestea se pot combina, in funcție de preferințe, cu nuanțele bolurilor.  
                 </p>
-                <button class="about-discover discover">
-                    Descopera
-                </button>
             </div>
             <div class="right2">
                 
@@ -204,9 +193,6 @@
                 <p class="aboutDescription">
                     Doze de 330ml de combustibil (bioetanol) cu sigilare, pentru facilitarea alimentarii dispozitivului si prevenirea accidentelor.  
                 </p>
-                <button class="about-discover discover">
-                    Descopera
-                </button>
             </div>
         </div>
         

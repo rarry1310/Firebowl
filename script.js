@@ -1,7 +1,7 @@
 //NAV SCROLL STICKY
 
 let nav = document.getElementById('nav');
-let alert = document.getElementById("alert");
+let alertMessage = document.getElementById("alertMessage");
 let cartIcon = document.getElementById("openCart")
 
 window.onscroll = function() {
@@ -149,9 +149,9 @@ generateShop();
 
 function addToCart(id) {
     //ADD ALERT ON ADD  TO CART BUTTON
-    alert.classList.add("alert-fade");
+    alertMessage.classList.add("alert-fade");
     setTimeout(function () {
-        alert.classList.remove("alert-fade");
+        alertMessage.classList.remove("alert-fade");
     }, 1500);
     
 
@@ -166,6 +166,7 @@ function addToCart(id) {
     }
     localStorage.setItem("data", JSON.stringify(cart));
     generateCart();
+    addProductsToForm();
 }
 
 
@@ -204,15 +205,22 @@ function createCartCard(id, item, search) {
 
 
 function generateCart() {
+
+    let submitOrder = document.getElementById('submit-order');
+
     if (cart.length !== 0) {
         let article = cart.map((cartItem) => {
             let { id, item } = cartItem;
             let shopItem = shopItemsData.find((shopItem) => shopItem.id === id) || [];
             return createCartCard(id, item, shopItem);
         }).join("");
+        submitOrder.style.visibility = 'visible';
+        submitOrder.removeAttribute('disabled');
         cartContainer.innerHTML = article;
     } else {
+        
         cartContainer.innerHTML = `<h2>Cosul este gol</h2>`;
+        submitOrder.style.visibility = 'hidden';
     }
 }
 
@@ -298,46 +306,60 @@ function myFunction() {
 }
 
 
+// SHOW/HIDE ORDER FORM
+
+let submitOrder = document.getElementById('submit-order');
+let mainBlock = document.getElementById('main-block');
+let submitBack = document.getElementById('submit-back');
 
 
+if(submitOrder) {
+    submitOrder.addEventListener('click', () => {
+        mainBlock.style.visibility = 'initial';
+        cartContainer.style.visibility = 'hidden';
+        submitOrder.style.visibility = 'hidden';
+        cartContainer.style.position = 'absolute';
+        mainBlock.style.position = 'relative';
+        mainBlock.style.top = '0';
+    })
+}
 
-// function submitOrder() {
-//     let casuta = document.getElementById('casuta');
-//     let submit = document.getElementById('submit');
+if(submitBack) {
+    submitBack.addEventListener('click', () => {
+        mainBlock.style.visibility = 'hidden';
+        cartContainer.style.visibility = 'initial';
+        submitOrder.style.visibility = 'initial';
+        cartContainer.style.position = 'relative';
+        checkbox.checked = false;
+        lastOrderSubmit.setAttribute("disabled", "");
+    })
+}
 
-//     if(casuta.checked) {
-//         document.getElementById("submit").disabled = true;
-//     } else {
-//         document.getElementById("submit").disabled = false;
-//     }
-// }
-
-// submit.onclick = alertSubmit();
-
-// function alertSubmit() {
-//     if(document.getElementById("submit").disabled = true) {
-//         alert("Bifeaza termenii coaie!")
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ADD PRODUCTS TO FORM
 
 function addProductsToForm () {
     let someProducts = localStorage.getItem('data');
     document.getElementById('cartProducts').value = someProducts;
+    console.log(someProducts);
 }
 
 addProductsToForm();
+
+
+let lastOrderSubmit = document.getElementById('lastOrderSubmit');
+lastOrderSubmit.addEventListener('click' , () => {
+    localStorage.clear();
+})
+
+// DISABLE/ENABLE TRIMITE COMANDA
+
+let checkbox = document.getElementById('checkbox');
+
+function validate() {
+    if (checkbox.checked) {
+        lastOrderSubmit.removeAttribute("disabled");
+    }
+    else {
+        lastOrderSubmit.setAttribute("disabled", "");
+    }
+}
