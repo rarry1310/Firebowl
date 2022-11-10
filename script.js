@@ -177,7 +177,7 @@ let cartContainer = document.getElementById('cartContainer');
 let label = document.getElementById('label');
 
 function createCartCard(id, item, search) {
-    let newItem = `<article class="cartCard">
+    let newItem = `<article class="cartCard" id="cartCard">
         <div class="cartBox">
             <img src="${search.img}" alt="" class="cartImg">
         </div>
@@ -363,3 +363,10 @@ function validate() {
         lastOrderSubmit.setAttribute("disabled", "");
     }
 }
+
+
+
+
+// let cartAmountNumber = document.getElementById('cartAmountNumber');
+
+// console.log(cartAmountNumber);
