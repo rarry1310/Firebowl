@@ -135,7 +135,7 @@ let generateShop = () => {
             ${name}
         </h4>
         <span class="productPrice">
-            <p class="old-price-cart">1000 LEI</p>
+            
             ${price} LEI
         </span>
         <button onclick ="addToCart(${id})" class="button active discover" id="button">
@@ -290,21 +290,21 @@ TotalAmount();
 
 
 
-function seeMore() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var aboutMoreButton = document.getElementById("about-more-button");
+// function seeMore() {
+//     var dots = document.getElementById("dots");
+//     var moreText = document.getElementById("more");
+//     var aboutMoreButton = document.getElementById("about-more-button");
 
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        aboutMoreButton.innerHTML = "Mai mult"; 
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        aboutMoreButton.innerHTML = "Mai putin"; 
-        moreText.style.display = "inline";
-    }
-}
+//     if (dots.style.display === "none") {
+//         dots.style.display = "inline";
+//         aboutMoreButton.innerHTML = "Mai mult"; 
+//         moreText.style.display = "none";
+//     } else {
+//         dots.style.display = "none";
+//         aboutMoreButton.innerHTML = "Mai putin"; 
+//         moreText.style.display = "inline";
+//     }
+// }
 
 
 // SHOW/HIDE ORDER FORM
@@ -371,3 +371,13 @@ function validate() {
 // let cartAmountNumber = document.getElementById('cartAmountNumber');
 
 // console.log(cartAmountNumber);
+
+
+
+// showMenu navList
+// showCartClass showCart
+
+if(navList) {
+    body.overflow-y
+    
+}

@@ -92,7 +92,7 @@ nav {
 }
 
 .logo-img {
-    height: 100%;
+    height: 125%;
 }
 
 .navList {
@@ -155,6 +155,11 @@ nav {
 .openCart,
 .openNav {
     cursor: pointer;
+}
+
+.openCart,
+.openNav {
+    font-size: 1.7rem;
 }
 
 

@@ -20,7 +20,7 @@
         <div class="navList" id="navList">
             <ul>
                 <li><a href="#home" class="navLink active">acasa</a></li>
-                <li><a href="#info" class="navLink">despre</a></li>
+                <li><a href="" class="navLink">despre</a></li>
                 <li><a href="#products" class="navLink">produse</a></li>
                 <!-- <li><a href="#instructions" class="navLink">instructiuni</a></li> -->
                 <li><a href="#contact" class="navLink">contact</a></li>
@@ -74,7 +74,7 @@
                     <input type="text" name="Numar telefon" placeholder="Numar de telefon">
                     <input type="text" name="address" placeholder="Adresa">
                     <input type="hidden" value="" id="cartProducts" name="Produse">
-                    <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">
+                    <input type="hidden" name="_next" value="http://firebowl.ro">
                 </div>
                 <div class="checkbox">
                     <input type="checkbox" name="checkbox" id="checkbox" onclick="validate()"><span>Sunt de acord cu <a href="terms.html" class="terms-form">Termenii si conditiile</a> si <a href="politics.html" class="politics-form">Politica de confidentialitate</a></span>
@@ -120,23 +120,9 @@
                     Povestea noastra
                 </h2>
                 <p class="aboutDescription aboutFirstDescription">
-                    Majoritatea afacerilor de succes pornesc de la o idee simplă iar poveștile lor sunt cu adevărat inspiraționale.
-                    <br>
-                    Pe lângă dorința de a crea un produs 100% românesc în țara în care ne-am născut și de a descoperi tainele antreprenoriatului, ne dorim să fim o sursă de inspirație pentru cei ce doresc să își înființeze o afacere , în care visul lor să devină realitate.<span id="dots"></span> <span id="more">
-                    <br>
-                    Afacerea a fost înființată în 2021, localizată în zona Argeșului, însă după multe teste cu conserve de porumb, încercări reușite dar și eșuate de a porni flacăra, am reușit ca în anul acesta să lansăm produsul ce doar noi ni-l imaginam, și anume un șemineu portabil.
-                    <br>
-                    Da, ați citit bine. Un șemineu portabil de care suntem foarte mândri și despre care abia așteptam să vă auzim părerea.
-                    <br>
-                    Fondatorii, doua persoane ce au fost colegi de liceu, ce la începutul acestuia nu se cunoșteau dar pe parcurs ce anii copilăriei au trecut au devenit prieteni. Împărțind aceeași pasiune de a petrece timp cat mai mult cu cei apropriați lor, a apărut ideea unui șemineu portabil care să completeze ambientul.
-                    <br>
-                    De multe ori ne imaginăm sau preferăm să stăm în fața unui șemineu , cu o carte în mână și un pahar de vin. Însă cum ar fi dacă ai putea să ai acel șemineu cu tine, într-o formă unică , oriunde dorește, la fiecare întâlnire cu prietenii sau pur si simplu atunci când iți dorești o seară liniștită în casa ta.
-                    <br>
-                    Noi ne-am gândit, la a avea posibilitatea să creezi oriunde ambientul dorit , oferind un șemineu portabil în mai multe nuanțe, ce poate fi combinat cu cele două culori de pietre pentru a fi pe placul tău sau pentru a se potrivi cât mai bine în orice loc l-ai pune.
-                    <br>
-                    Bineînțeles, drumul nostru până aici nu a fost ușor, însă a meritat pe deplin tot efortul pentru a crea un produs fabricat 100% în Romania de care suntem foarte mândri.</span>
+                    Drumul nostru până aici nu a fost ușor, însă a meritat pe deplin tot efortul pentru a crea un produs fabricat 100% în Romania de care suntem foarte mândri.</span>
                 </p>
-                <button class="about-discover btn-color" onclick="seeMore()" id="about-more-button">Mai mult</button>
+                <!-- <button class="about-discover btn-color" onclick="window.open('about-us.html')" id="about-more-button">Mai mult</button> -->
             </div>
         </div>
 
@@ -209,7 +195,7 @@
         </div>
     </section>
 
-    <section class="contact-us">
+    <section class="contact-us" id="contact">
         <section class="contact-left">
             <span class="contact-location">Comuna Mușătești Județ Argeș</span>
             <span class="contact-location">Sat Robaia, Nr.229</span>
