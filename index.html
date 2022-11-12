@@ -22,7 +22,7 @@
                 <li><a href="#home" class="navLink active">acasa</a></li>
                 <li><a href="#info" class="navLink">despre</a></li>
                 <li><a href="#products" class="navLink">produse</a></li>
-                <li><a href="#instructions" class="navLink">instructiuni</a></li>
+                <!-- <li><a href="#instructions" class="navLink">instructiuni</a></li> -->
                 <li><a href="#contact" class="navLink">contact</a></li>
             </ul>
             <div class="closeNav" id="closeNav">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="navBtns">
-            <i class='bx bx-moon moon'></i>
+            <!-- <i class='bx bx-moon moon'></i> -->
             <i class='bx bx-cart-alt openCart' id="openCart"></i>
             <i class='bx bx-grid-alt openNav' id="openNav"></i>
         </div>
@@ -39,7 +39,7 @@
     <!-- ALERT ADD TO CART -->
 
     <div class="alert-message" id="alertMessage">
-        <h1 class="alert-title">Produs adaugat!</h1>
+        <h1 class="alert-title">Produs adăugat în coș!</h1>
     </div>
 
     <!-- CART -->
@@ -65,7 +65,7 @@
         </button>
 
         <div class="main-block" id="main-block">
-            <form action="https://formsubmit.co/trandafir.rares@gmail.com" method="POST">
+            <form action="https://formsubmit.co/office@firebowl.ro" method="POST">
                 <div class="info1">
                     <input type="hidden" name="_captcha" value="false">
                     <input class="fname" type="text" name="name" placeholder="Nume">
@@ -77,7 +77,7 @@
                     <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">
                 </div>
                 <div class="checkbox">
-                    <input type="checkbox" name="checkbox" id="checkbox" onclick="validate()"><span>Sunt de acord cu <a href="terms.html" class="terms-form">Termeni si conditii</a></span>
+                    <input type="checkbox" name="checkbox" id="checkbox" onclick="validate()"><span>Sunt de acord cu <a href="terms.html" class="terms-form">Termenii si conditiile</a> si <a href="politics.html" class="politics-form">Politica de confidentialitate</a></span>
                 </div>
                 <button type="submit" class="last-order-submit" id="lastOrderSubmit" disabled="disabled">Trimite comanda</button>
                 <button type="button" class="submit-back" id="submit-back">Inapoi</button>
@@ -122,9 +122,9 @@
                 <p class="aboutDescription aboutFirstDescription">
                     Majoritatea afacerilor de succes pornesc de la o idee simplă iar poveștile lor sunt cu adevărat inspiraționale.
                     <br>
-                    Pe lângă dorința de a crea un produs 100% românesc în țara în care ne-am născut și de a descoperi tainele antreprenoriatului, ne dorim să fim o sursă de inspirație pentru cei ce doresc să își înființeze o afacere , în care visul lor să devină realitate.
+                    Pe lângă dorința de a crea un produs 100% românesc în țara în care ne-am născut și de a descoperi tainele antreprenoriatului, ne dorim să fim o sursă de inspirație pentru cei ce doresc să își înființeze o afacere , în care visul lor să devină realitate.<span id="dots"></span> <span id="more">
                     <br>
-                    Afacerea a fost înființată în 2021, localizată în zona Argeșului, însă după multe teste cu conserve de porumb,<span id="dots">...</span> <span id="more"> încercări reușite dar și eșuate de a porni flacăra, am reușit ca în anul acesta să lansăm produsul ce doar noi ni-l imaginam, și anume un șemineu portabil.
+                    Afacerea a fost înființată în 2021, localizată în zona Argeșului, însă după multe teste cu conserve de porumb, încercări reușite dar și eșuate de a porni flacăra, am reușit ca în anul acesta să lansăm produsul ce doar noi ni-l imaginam, și anume un șemineu portabil.
                     <br>
                     Da, ați citit bine. Un șemineu portabil de care suntem foarte mândri și despre care abia așteptam să vă auzim părerea.
                     <br>
@@ -203,11 +203,9 @@
             Produse
         </h2>
         <div class="products-container" id="products-container">
-            <!-- <i class='bx bxs-chevron-left left-arrow' id="left-arrow"></i> -->
             <div class="shop" id="shop">
-                add from js
+                <!-- add from js -->
             </div>
-            <!-- <i class='bx bxs-chevron-right right-arrow' id="right-arrow"></i> -->
         </div>
     </section>
 
@@ -215,19 +213,19 @@
         <section class="contact-left">
             <span class="contact-location">Comuna Mușătești Județ Argeș</span>
             <span class="contact-location">Sat Robaia, Nr.229</span>
-            <span class="contact-location">0736977068</span>
-        </section>
-        <section class="contact-right">
-            <a href="https://web.facebook.com/FIREBOWL.RO/" class="social-link"><i class='bx bxl-facebook'></i>Facebook</a>
-            <a href="https://www.instagram.com/firebowl_ro/" class="social-link"><i class='bx bxl-instagram'></i>Instagram</a>
-            <a href="https://www.youtube.com/firebowl_ro/" class="social-link"><i class='bx bxl-youtube'></i>Youtube</a>
+            <a class="terms" id="terms" target="popup" onclick="window.open('terms.html','Termeni si conditii')">Termeni si conditii</a>
         </section>
         <section class="contact-center">
-            <a class="terms" id="terms" target="popup" onclick="window.open('terms.html','Termeni si conditii')">Termeni si conditii</a>
-            <a class="terms" id="terms" target="popup" onclick="window.open('guarantee.html','Garantie')">Garantie</a>
-            <a class="terms" id="terms" target="popup" onclick="window.open('return.html','Retur')">Retur</a>
+            <a href="https://web.facebook.com/FIREBOWL.RO/" class="social-link"><i class='bx bxl-facebook'></i>Facebook</a>
+            <a href="https://www.instagram.com/firebowl_ro/" class="social-link"><i class='bx bxl-instagram'></i>Instagram</a>
+            <span class="contact-location"><i class='bx bxl-whatsapp'></i>0736977068</span>
+            <!-- <a href="https://www.youtube.com/firebowl_ro/" class="social-link"><i class='bx bxl-youtube'></i>Youtube</a> -->
         </section>
-        
+        <section class="contact-right">
+            <a class="terms" id="terms" target="popup" onclick="window.open('return.html','Retur')">Retur</a>
+            <a class="terms" id="terms" target="popup" onclick="window.open('guarantee.html','Garantie')">Garantie</a>
+            <a class="terms" id="terms" target="popup" onclick="window.open('politics.html','Politica de confidentialitate')">Politica de confidentialitate</a>
+        </section>
     </section>
     <!-- js -->
     <script src="./script.js"></script>

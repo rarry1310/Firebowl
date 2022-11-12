@@ -55,7 +55,7 @@ a {
     border-radius: 10px;
     width: max-content;
     padding: .3rem;
-    background-color: rgba(143, 143, 68, 0.952);
+    background-color: #8ecf97;
     z-index: 10;
     
 }
@@ -197,14 +197,6 @@ nav {
     cursor: pointer;
 }
 
-/* .label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: 500;
-} */
-
 .cartCard {
     display: flex;
     align-items: center;
@@ -246,9 +238,10 @@ nav {
 }
 
 .old-price-cart {
-    color: red;
+    color: rgba(116,121,128,1);
     text-decoration: line-through;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-right: .5rem;
 }
 
 .cartAmountNumber {
@@ -351,12 +344,13 @@ nav {
 }
 
 .old-price {
-    color: #fff;
-    box-shadow: 0 0 30px 2px #fff;
+    color: #000;
+    box-shadow: 0 0 30px 2px #000;
 }
 
 .new-price {
-    box-shadow: 0 0 20px 2px #fff;
+    color: #fff;
+    box-shadow: 0 0 20px 10px red;
 }
 
 .button-banner {
@@ -402,6 +396,7 @@ nav {
     grid-template-columns: repeat(2,1fr);
     row-gap: 1rem;
     column-gap: 1rem;
+    /* font-style: italic; */
 }
 
 .about-first {
@@ -410,6 +405,7 @@ nav {
     display: flex;
     justify-content: center;
     box-shadow: 0 0 5px 2px rgba(116,121,128,1);
+    font-style: italic;
 }
 
 .about-left {
@@ -537,16 +533,12 @@ nav {
     place-items: center;
 }
 
-.shop::-webkit-scrollbar {
-    display: none;
+.product-title {
+    width: 15rem;
 }
 
-.left-arrow,
-.right-arrow {
-    color: #000;
-    font-size: 40px;
-    cursor: pointer;
-    display: none !important;
+.shop::-webkit-scrollbar {
+    display: none;
 }
 
 .item {
@@ -575,22 +567,29 @@ nav {
     justify-content: center;
 }
 
+.productPrice {
+    color: #e97110;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 .button {
     cursor: pointer;
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     font-weight: 800;
     font-size: 16px;
     width: max-content;
     display: flex;
     margin: auto;
-    padding: .5rem 2rem;
+    padding: .5rem 1.3rem;
     border-radius: 0.5rem 0.5rem 0 0;
     transition: .5s;
     position: relative;
     transform: translateY(.5rem);
     opacity: 0;
     border: none;
+    text-transform: uppercase;
 }
 
 .item:hover .button {
@@ -728,7 +727,7 @@ nav {
 }
 
 form {
-    background: rgba(0, 0, 0, 0.7); 
+    background: #6B6762; 
 }
 
 .title {
@@ -793,7 +792,7 @@ option {
     margin: 20px 5px 0;
 }
 
-.terms-form {
-    color: rgb(64, 64, 238) !important;
-    text-decoration: underline !important;
+.terms-form,
+.politics-form {
+    color: rgb(255, 255, 255) !important;
 }

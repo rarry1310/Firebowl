@@ -70,59 +70,60 @@ let cart = JSON.parse(localStorage.getItem("data")) || [];
 let shopItemsData = [
     {
         id: 0,
-        name: "black & black",
+        name: "Bol negru cu pietre negre",
         price: 600,
         img: "./assets/Studio/Studio01.jpg"
     },
     {
         id: 1,
-        name: "tropical",
+        name: "Bol gri cu pietre negre",
         price: 600,
         img: "./assets/Studio/Studio05.jpg"
     },
     {
         id: 2,
-        name: "Firebowl3",
+        name: "Bol verde cu pietre negre",
         price: 600,
         img: "./assets/Studio/Studio03.jpg"
     },
     {
         id: 3,
-        name: "black & black",
+        name: "Bol negru cu pietre albe",
         price: 600,
         img: "./assets/Studio/Studio10.jpg"
     },
     {
         id: 4,
-        name: "tropical",
+        name: "Bol gri cu pietre albe",
         price: 600,
         img: "./assets/Studio/Studio07.jpg"
     },
     {
         id: 5,
-        name: "Firebowl3",
+        name: "Bol verde cu pietre albe",
         price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 6,
-        name: "black & black",
+        name: "Bol alb cu pietre albe",
         price: 600,
         img: "./assets/Studio/Studio08.jpg"
     },
     {
         id: 7,
-        name: "tropical",
-        price: 600,
+        name: "Doza combustibil",
+        price: 10,
         img: "./assets/Studio/Studio12.jpg"
     },
     {
         id: 8,
-        name: "Firebowl3",
-        price: 600,
+        name: "Pachet 6 doze combustibil",
+        price: 50,
         img: "./assets/Studio/Studio13.jpg"
     }
 ]
+
 
 let generateShop = () => {
     return (shop.innerHTML = shopItemsData.map((x) => {
@@ -134,11 +135,11 @@ let generateShop = () => {
             ${name}
         </h4>
         <span class="productPrice">
-            <h1 class="old-price-cart">1000 LEI</h1>
+            <p class="old-price-cart">1000 LEI</p>
             ${price} LEI
         </span>
         <button onclick ="addToCart(${id})" class="button active discover" id="button">
-            Adauga in cos
+            Adaugă în coș
         </button>
     </div>
     `
@@ -182,7 +183,7 @@ function createCartCard(id, item, search) {
             <img src="${search.img}" alt="" class="cartImg">
         </div>
         <div class="cartDetails">
-            <h3 class="product-title">${search.name}</h3>
+            <h6 class="product-title">${search.name}</h3>
             <span class="cartPrice">${item * search.price} LEI</span>
             <div class="cartAmount">
                 <div class="cartAmountContent">
@@ -289,7 +290,7 @@ TotalAmount();
 
 
 
-function myFunction() {
+function seeMore() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
     var aboutMoreButton = document.getElementById("about-more-button");

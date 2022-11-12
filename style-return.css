@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+
+
+body {
+    margin: 2rem;
+
+}
+
+ul {
+    margin-top: 1rem;
+}
+
+li {
+    margin-top: .5rem;
+    margin-left: 1rem;
+}
