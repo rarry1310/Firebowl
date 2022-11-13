@@ -564,12 +564,13 @@ nav {
     margin: auto;
 }
 
-.productName,
+.product-name,
 .productPrice,
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .productPrice {

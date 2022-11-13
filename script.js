@@ -70,55 +70,55 @@ let cart = JSON.parse(localStorage.getItem("data")) || [];
 let shopItemsData = [
     {
         id: 0,
-        name: "Bol negru cu pietre negre",
+        name: "Șemineu negru cu pietre negre",
         price: 600,
         img: "./assets/Studio/Studio01.jpg"
     },
     {
         id: 1,
-        name: "Bol gri cu pietre negre",
+        name: "Șemineu gri cu pietre negre",
         price: 600,
         img: "./assets/Studio/Studio05.jpg"
     },
     {
         id: 2,
-        name: "Bol verde cu pietre negre",
+        name: "Șemineu turcoaz cu pietre negre",
         price: 600,
         img: "./assets/Studio/Studio03.jpg"
     },
     {
         id: 3,
-        name: "Bol negru cu pietre albe",
+        name: "Șemineu negru cu pietre albe",
         price: 600,
         img: "./assets/Studio/Studio10.jpg"
     },
     {
         id: 4,
-        name: "Bol gri cu pietre albe",
+        name: "Șemineu gri cu pietre albe",
         price: 600,
         img: "./assets/Studio/Studio07.jpg"
     },
     {
         id: 5,
-        name: "Bol verde cu pietre albe",
+        name: "Șemineu turcoaz cu pietre albe",
         price: 600,
         img: "./assets/Studio/Studio11.jpg"
     },
     {
         id: 6,
-        name: "Bol alb cu pietre albe",
+        name: "Șemineu alb cu pietre albe",
         price: 600,
         img: "./assets/Studio/Studio08.jpg"
     },
     {
         id: 7,
-        name: "Doza combustibil",
+        name: "Doză de combustibil Firecell",
         price: 10,
         img: "./assets/Studio/Studio12.jpg"
     },
     {
         id: 8,
-        name: "Pachet 6 doze combustibil",
+        name: "Set doze de combustibil Firecell",
         price: 50,
         img: "./assets/Studio/Studio13.jpg"
     }
@@ -131,7 +131,7 @@ let generateShop = () => {
         return `
     <div id=product-id-${id} class="item">
         <img src=${img} alt="" class="productImg">
-        <h4 class="productName">
+        <h4 class="product-name">
             ${name}
         </h4>
         <span class="productPrice">
