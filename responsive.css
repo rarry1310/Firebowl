@@ -69,8 +69,12 @@
         row-gap: 1.5rem;
     }
 
-    .productImg {
+    .product-img {
         width: 200px;
+    }
+
+    .product-name {
+        margin: 0 .2rem;
     }
     /* END PRODUCTS */
 
@@ -323,6 +327,12 @@
         top: 1rem;
     }
     /* END HOME */
+
+    /* CART */
+    /* .product-name {
+        width: 60%;
+        margin: auto;
+    } */
 
     /* INFO */
     .info {

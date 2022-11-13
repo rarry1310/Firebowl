@@ -130,7 +130,7 @@ let generateShop = () => {
         let { id, name, price, img } = x;
         return `
     <div id=product-id-${id} class="item">
-        <img src=${img} alt="" class="productImg">
+        <img src=${img} alt="" class="product-img">
         <h4 class="product-name">
             ${name}
         </h4>

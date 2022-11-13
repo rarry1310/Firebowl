@@ -401,7 +401,6 @@ nav {
     grid-template-columns: repeat(2,1fr);
     row-gap: 1rem;
     column-gap: 1rem;
-    /* font-style: italic; */
 }
 
 .about-first {
@@ -551,17 +550,18 @@ nav {
     border-radius: 20px;
 }
 
-.item:hover {
+/* .item:hover {
     box-shadow: 0 0 15px 2px #000000;
-}
+} */
 
-.productImg {
+.product-img {
     width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: auto;
+    /* border-radius: 30px; */
 }
 
 .product-name,
@@ -589,7 +589,8 @@ nav {
     display: flex;
     margin: auto;
     padding: .5rem 1.3rem;
-    border-radius: 0.5rem 0.5rem 0 0;
+    /* border-radius: 0.5rem 0.5rem 0 0; */
+    border-radius: 0 0 .5rem .5rem;
     transition: .5s;
     position: relative;
     transform: translateY(.5rem);
@@ -618,7 +619,7 @@ nav {
 .contact-us:before {
     content: "";
     height: 0.188rem;
-    width: 80%;
+    width: 100%;
     background: #6B6762;
     position: absolute;
     top: -0.625rem;
