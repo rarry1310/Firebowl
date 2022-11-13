@@ -376,8 +376,3 @@ function validate() {
 
 // showMenu navList
 // showCartClass showCart
-
-if(navList) {
-    body.overflow-y
-    
-}

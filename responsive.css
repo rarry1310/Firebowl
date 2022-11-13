@@ -5,6 +5,12 @@
         margin: 0 28rem;
     }
 
+    /* HOME */
+    .banner-title {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
     /* CART */
     .cart-top {
         margin: 0 28rem;
@@ -34,6 +40,11 @@
 
     body {
         margin: 0 15rem;
+    }
+
+    /* HOME */
+    .banner-title {
+        margin-right: 1rem;
     }
 
     /* CART */
