@@ -2,7 +2,7 @@ const navigationHeight = document.querySelector('.nav').offsetHeight;
  
 // console.log(document.documentElement);
 
-document.documentElement.style.setProperty('--scroll-padding', navigationHeight - 2 + "px");
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight - 1 + "px");
 
 //NAV SCROLL STICKY
 
@@ -356,6 +356,7 @@ addProductsToForm();
 let lastOrderSubmit = document.getElementById('lastOrderSubmit');
 lastOrderSubmit.addEventListener('click' , () => {
     localStorage.clear();
+    window.alert("Comanda a fost plasată");
 })
 
 // DISABLE/ENABLE TRIMITE COMANDA
@@ -382,6 +383,3 @@ function validate() {
 
 // showMenu navList
 // showCartClass showCart
-
-
-
