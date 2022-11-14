@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 50px);
+}
+
 /* google font */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -114,6 +119,10 @@ nav {
     font-weight: 700;
     text-transform: uppercase;
     color: #050505;
+}
+
+.navLink {
+    cursor: pointer;
 }
 
 .closeNav {
@@ -802,4 +811,14 @@ option {
 .terms-form,
 .politics-form {
     color: rgb(255, 255, 255) !important;
+}
+
+
+/* ANPC */
+.anpc {
+    display: flex;
+    justify-content: space-around;
+}
+.anpc1 {
+    width: 250px;
 }

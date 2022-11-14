@@ -1,3 +1,9 @@
+const navigationHeight = document.querySelector('.nav').offsetHeight;
+ 
+// console.log(document.documentElement);
+
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight - 2 + "px");
+
 //NAV SCROLL STICKY
 
 let nav = document.getElementById('nav');
@@ -376,3 +382,6 @@ function validate() {
 
 // showMenu navList
 // showCartClass showCart
+
+
+

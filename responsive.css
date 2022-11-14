@@ -323,7 +323,7 @@
     }
 
     .bannerImgSmallPhone {
-        width: 300px !important;
+        width: 295px !important;
         top: 1rem;
     }
     /* END HOME */
@@ -360,9 +360,8 @@
         justify-content: center;
     }
 
-    .left-arrow,
-    .right-arrow {
-        display: initial !important;
+    .item {
+        padding-bottom: .5rem;
     }
 
     .products {
@@ -383,6 +382,14 @@
     }
 
     /* END CONTACT */
+
+    /* ANPC */
+    .anpc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* END ANPC */
 }
 
 
