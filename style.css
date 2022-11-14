@@ -26,6 +26,9 @@ html {
     right: 0 !important;
 }
 
+.active {
+    color: #e97110 !important;
+}
 
 .old-price {
     text-decoration: line-through;

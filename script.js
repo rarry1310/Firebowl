@@ -347,7 +347,6 @@ if(submitBack) {
 function addProductsToForm () {
     let someProducts = localStorage.getItem('data');
     document.getElementById('cartProducts').value = someProducts;
-    console.log(someProducts);
 }
 
 addProductsToForm();
