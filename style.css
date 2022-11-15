@@ -635,6 +635,7 @@ nav {
 	margin-bottom: 5px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+    
 }
 .box-area span {
 	color: #262626;
@@ -665,6 +666,16 @@ nav {
 	height: auto;
 	border-radius: 50%;
 }
+
+.box-area .img-area:hover {
+	border: 5px solid #e97110;
+}
+
+.content {
+    height: 10rem;
+    overflow-y: hidden;
+}
+
 .socials {
 	margin-top: 30px;
 }
