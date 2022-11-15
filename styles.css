@@ -667,6 +667,12 @@ nav {
 	border-radius: 50%;
 }
 
+.testimonial-img {
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+
 .box-area .img-area:hover {
 	border: 5px solid #e97110;
 }
@@ -674,6 +680,7 @@ nav {
 .content {
     height: 10rem;
     overflow-y: hidden;
+    color: #747980;
 }
 
 .socials {
