@@ -55,12 +55,13 @@ for (i = 0; i < navLink.length; i++) {
 let showCart = document.getElementById('showCart');
 let closeCart = document.getElementById('closeCart');
 let openCart = document.getElementById('openCart');
-let body = document.querySelector('body');
+let body = document.querySelector('html');
+
 
 if (openCart) {
     openCart.addEventListener('click', () => {
         showCart.classList.toggle('showCartClass');
-        body.style.overflow = "hidden"
+        body.style.overflow = "hidden";
     })
 }
 
@@ -364,7 +365,6 @@ lastOrderSubmit.addEventListener('click' , (e) => {
     localStorage.clear();
     window.alert("Comanda a fost plasată");
     body.style.overflow = "visible";
-    location.reload();
 })
 
 // DISABLE/ENABLE TRIMITE COMANDA

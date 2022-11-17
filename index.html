@@ -7,8 +7,6 @@
     <!-- css -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./responsive.css">
-    <!-- bootstrap -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <!-- owl carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
@@ -16,20 +14,18 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Fire Bowl</title>
 </head>
-<body>
+<bod>
 
     <!-- NAV -->
 
     <nav class="nav" id="nav">
-        <img src="./assets/logo/FIREBOWL_PNG.png" alt="" class="logo-img">
+        <a href="#home"><img src="./assets/logo/FIREBOWL_PNG.png" alt="" class="logo-img"></a>
         <div class="navList" id="navList">
             <ul>
-                <li><a href="#home" class="navLink">acasă</a></li>
-                <li><a href="#" class="navLink">despre</a></li>
+                <li><a href="#info" class="navLink">despre</a></li>
                 <li><a href="#products" class="navLink">produse</a></li>
                 <li><a href="#testimonial_area" class="navLink">testimoniale</a></li>
-                <!-- <li><a href="#instructions" class="navLink">instructiuni</a></li> -->
-                <li><a href="#" class="navLink">contact</a></li>
+                <li><a href="#contact" class="navLink">contact</a></li>
             </ul>
             <div class="closeNav" id="closeNav">
                 <i class='bx bx-x'></i>
@@ -85,7 +81,7 @@
                 <div class="checkbox">
                     <input type="checkbox" name="checkbox" id="checkbox" onclick="validate()"><span>Sunt de acord cu <a href="terms.html" class="terms-form">Termenii și condițiile</a> și <a href="politics.html" class="politics-form">Politica de confidențialitate</a></span>
                 </div>
-                <button type="button" class="last-order-submit" id="lastOrderSubmit" disabled="disabled">Trimite comanda</button>
+                <button type="submit" class="last-order-submit" id="lastOrderSubmit" disabled="disabled">Trimite comanda</button>
                 <button type="button" class="submit-back" id="submit-back">Înapoi</button>
             </form>
         </div>
@@ -128,7 +124,6 @@
                 <p class="aboutDescription aboutFirstDescription">
                     Drumul nostru până aici nu a fost ușor, însă a meritat pe deplin tot efortul pentru a crea un produs fabricat 100% în Romania de care suntem foarte mândri.</span>
                 </p>
-                <!-- <button class="about-discover btn-color" onclick="window.open('about-us.html')" id="about-more-button">Mai mult</button> -->
             </div>
         </div>
 
@@ -141,14 +136,14 @@
                     Șemineu Portabil, fabricat în întregime în România, alimentat prin Combustibil ecologic, fără emisii de fum sau miros 
                 </p>
             </div>
-            <div class="right1">
-               
+            <div class="about-discover-img">
+                <img src="./assets/info-poze/Firebowl Semineu Negru .jpg" alt="">
             </div>
         </div>
 
         <div class="about-left">
-            <div class="left1">
-                
+            <div class="about-discover-img">
+                <img src="./assets/info-poze/Arzator Focar Firebowl Semineu.jpg" alt="">
             </div>
             <div class="aboutRight">
                 <h2 class="aboutTitle">
@@ -169,14 +164,14 @@
                     Pietre Decorative in doua culori, Negru lucios si Alb Thassos. Acestea se pot combina, in funcție de preferințe, cu nuanțele bolurilor.  
                 </p>
             </div>
-            <div class="right2">
-                
+            <div class="about-discover-img">
+                <img src="./assets/info-poze/Pietre decorative Firebowl semineu.jpg" alt="">
             </div>
         </div>
 
         <div class="about-left">
-            <div class="left2">
-                
+            <div class="about-discover-img">
+                <img src="./assets/info-poze/Firecell Firebowl Semineu Bioetanol Alimentare.jpg" alt="">
             </div>
             <div class="aboutRight">
                 <h2 class="aboutTitle">
@@ -187,7 +182,6 @@
                 </p>
             </div>
         </div>
-        
     </section>
 
     <section class="products" id="products">

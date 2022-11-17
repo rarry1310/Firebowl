@@ -193,6 +193,10 @@
         margin: 0 1rem !important;
     }
 
+    .about-discover-img img {
+        height: 125px;
+    }
+
     .aboutDescription {
         margin: 0;
     }
@@ -397,6 +401,12 @@
 
 /* 375px */
 @media screen and (max-width:375px) {
+
+    /* INFO */
+    .about-discover-img img {
+        height: 115px;
+    }
+
     /* CART */
     .cart-top {
         margin: 0 1.3rem;

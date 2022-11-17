@@ -95,8 +95,8 @@ nav {
     position: sticky;
 }
 
-.logo-img {
-    height: 125%;
+a .logo-img {
+    height: 125px;
 }
 
 .navList {
@@ -459,32 +459,17 @@ nav {
     box-shadow: 0 0 5px 2px rgba(116,121,128,1);
 }
 
-.right1 {
-    background-image: url(./assets/Natura/Photo14.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.about-discover-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.left1 {
-    background-image: url(./assets/Natura/Photo12.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.right2 {
-    background-image: url(./assets/Natura/Photo21.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.left2 {
-    background-image: url(./assets/Natura/Photo11.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.about-discover-img img {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    margin: auto;
 }
 
 .aboutRight {
