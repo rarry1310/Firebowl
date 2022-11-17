@@ -284,6 +284,11 @@ nav {
     cursor: pointer;
 }
 
+.decrement,
+.increment {
+    color: rgba(116,121,128,1);
+}
+
 .cartAmountTrash {
     font-size: 1.25rem;
     color: #000;
@@ -301,9 +306,29 @@ nav {
     display: flex;
     margin: 3rem auto;
     padding: 1rem .5rem;
-    background-color: transparent;
     border-radius: 3px;
-    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgba(116,121,128,1);
+    color: #fff;
+    font-size: 1.25rem;
+    border: none;
+}
+
+.submit-back,
+.last-order-submit {
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.25rem;
+    border: 1px rgba(116,121,128,1);
+    box-shadow: 0 0 5px 1px;
+    margin-top: 1rem;
+    padding: .3rem;
+}
+
+.submit-back {
+    margin-left: .5rem;
 }
 
 /* =============== HOME ============= */
@@ -887,28 +912,12 @@ input, select {
 
 input::placeholder {
     color: #eee;
-}
-
-option:focus {
-    border: none;
-}
-
-option {
-    background: black; 
-    border: none;
+    font-size: 1.2rem;
 }
 
 .checkbox input {
     margin: 0 10px 0 0;
     vertical-align: middle;
-}
-
-.checkbox a {
-    color: #26a9e0; 
-}
-
-.checkbox a:hover {
-    color: #85d6de;
 }
 
 .btn-item {

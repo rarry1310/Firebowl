@@ -29,12 +29,14 @@ let navLink = document.getElementsByClassName('navLink');
 if (openNav) {
     openNav.addEventListener('click', () => {
         navList.classList.add('showMenu');
+        body.style.overflow = "hidden"
     })
 }
 
 if (closeNav) {
     closeNav.addEventListener('click', () => {
         navList.classList.remove('showMenu');
+        body.style.overflow = "visible"
     })
 }
 
@@ -42,6 +44,7 @@ for (i = 0; i < navLink.length; i++) {
     if (navLink) {
         navLink[i].addEventListener('click', () => {
             navList.classList.remove('showMenu');
+            body.style.overflow = "visible"
         })
     }
 }
@@ -52,10 +55,12 @@ for (i = 0; i < navLink.length; i++) {
 let showCart = document.getElementById('showCart');
 let closeCart = document.getElementById('closeCart');
 let openCart = document.getElementById('openCart');
+let body = document.querySelector('body');
 
 if (openCart) {
     openCart.addEventListener('click', () => {
         showCart.classList.toggle('showCartClass');
+        body.style.overflow = "hidden"
     })
 }
 
@@ -63,6 +68,7 @@ if (openCart) {
 if (closeCart) {
     closeCart.addEventListener('click', () => {
         showCart.classList.remove('showCartClass');
+        body.style.overflow = "visible"
     })    
 }
 
@@ -194,13 +200,13 @@ function createCartCard(id, item, search) {
             <div class="cartAmount">
                 <div class="cartAmountContent">
                 <span class="cartAmountBox">
-                    <i onclick="decrement(${id})" class='bx bxs-minus-square' ></i>
+                    <i onclick="decrement(${id})" class='bx bxs-minus-square decrement' ></i>
                 </span>
                 <span id=${id} class="cartAmountNumber" id="cartAmountNumber">
                     ${item}
                 </span>
                 <span class="cartAmountBox">
-                    <i onclick="increment(${id})" class='bx bxs-plus-square pluss' ></i>
+                    <i onclick="increment(${id})" class='bx bxs-plus-square pluss increment' ></i>
                 </span>
                 </div>
                 <i onclick = "cartAmountTrash(${id})" class='bx bxs-trash cartAmountTrash'></i>
@@ -353,9 +359,12 @@ addProductsToForm();
 
 
 let lastOrderSubmit = document.getElementById('lastOrderSubmit');
-lastOrderSubmit.addEventListener('click' , () => {
+lastOrderSubmit.addEventListener('click' , (e) => {
+    
     localStorage.clear();
     window.alert("Comanda a fost plasată");
+    body.style.overflow = "visible";
+    location.reload();
 })
 
 // DISABLE/ENABLE TRIMITE COMANDA
@@ -377,12 +386,6 @@ function validate() {
 // let cartAmountNumber = document.getElementById('cartAmountNumber');
 
 // console.log(cartAmountNumber);
-
-
-
-// showMenu navList
-// showCartClass showCart
-
 
 
 
