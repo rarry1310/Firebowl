@@ -148,7 +148,6 @@ let generateShop = () => {
             ${name}
         </h4>
         <span class="productPrice">
-            
             ${price} LEI
         </span>
         <button onclick ="addToCart(${id})" class="button active discover" id="button">
@@ -301,31 +300,18 @@ let TotalAmount = () => {
 
 TotalAmount();
 
-
-
-// function seeMore() {
-//     var dots = document.getElementById("dots");
-//     var moreText = document.getElementById("more");
-//     var aboutMoreButton = document.getElementById("about-more-button");
-
-//     if (dots.style.display === "none") {
-//         dots.style.display = "inline";
-//         aboutMoreButton.innerHTML = "Mai mult"; 
-//         moreText.style.display = "none";
-//     } else {
-//         dots.style.display = "none";
-//         aboutMoreButton.innerHTML = "Mai putin"; 
-//         moreText.style.display = "inline";
-//     }
-// }
-
-
 // SHOW/HIDE ORDER FORM
 
 let submitOrder = document.getElementById('submit-order');
 let mainBlock = document.getElementById('main-block');
 let submitBack = document.getElementById('submit-back');
 
+if(closeCart) [
+    closeCart.addEventListener('click', () => {
+        cartContainer.style.visibility = 'initial';
+        submitOrder.style.visibility = 'hidden';
+    })
+]
 
 if(submitOrder) {
     submitOrder.addEventListener('click', () => {
@@ -359,12 +345,17 @@ function addProductsToForm () {
 addProductsToForm();
 
 
+let allInputs = document.querySelectorAll("input");
 let lastOrderSubmit = document.getElementById('lastOrderSubmit');
 lastOrderSubmit.addEventListener('click' , (e) => {
-    
-    localStorage.clear();
-    window.alert("Comanda a fost plasată");
-    body.style.overflow = "visible";
+    if(allInputs.innerHTML.trim() == "") {
+        return;
+    }
+    else {
+        localStorage.clear();
+        window.alert("Comanda a fost plasată");
+        body.style.overflow = "visible";
+    }
 })
 
 // DISABLE/ENABLE TRIMITE COMANDA
@@ -379,13 +370,6 @@ function validate() {
         lastOrderSubmit.setAttribute("disabled", "");
     }
 }
-
-
-
-
-// let cartAmountNumber = document.getElementById('cartAmountNumber');
-
-// console.log(cartAmountNumber);
 
 
 
