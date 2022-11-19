@@ -362,6 +362,7 @@ a .logo-img {
     grid-template-columns: 30% 70%;
     height: 100%;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .price-reduced {
@@ -627,6 +628,7 @@ a .logo-img {
 
 #testimonial_area {
 	padding: 5% 0;
+    margin: 0 1rem;
 }
 .box-area {
 	padding: 30px;
@@ -635,7 +637,8 @@ a .logo-img {
 	background: #fff;
 	color: #000;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	margin: 40px 0;
+	margin: 40px 5px;
+    border-radius: 10px;
 }
 .box-area h5 {
 	font-size: 16px;
@@ -681,6 +684,8 @@ a .logo-img {
     width: 150px;
     height: 150px;
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 1rem;
 }
 
 .box-area .img-area:hover {
