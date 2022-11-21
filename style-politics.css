@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    margin-left: 5rem;
+}
+
+h3,
+p {
+    margin: 2rem 0 0 3rem;
+}
+
+h4 {
+    margin: 1.5rem 0 0 3rem;
+}
+
+ul {
+    margin: 1rem 0 0 5rem;
+}
