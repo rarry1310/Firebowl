@@ -227,7 +227,7 @@ a .logo-img {
     width: 7rem;
 }
 
-.cartTitle {
+.cart-title {
     margin-bottom: .5rem;
     display: flex;
     justify-content: center;
@@ -863,6 +863,8 @@ a .logo-img {
     justify-content: center;
     align-items: center;
     padding: 25px;
+    position: relative;
+    top: -200px;
 }
 
 .left-part, form {

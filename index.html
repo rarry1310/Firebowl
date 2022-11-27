@@ -14,8 +14,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Fire Bowl</title>
 </head>
-<bod>
-
+<body>
     <!-- NAV -->
 
     <nav class="nav" id="nav">
@@ -48,7 +47,7 @@
 
     <div class="showCart" id="showCart">
         <div class="cart-top scrolled" id="cartTop">
-            <h2 class="cartTitle">Cosul meu</h2>
+            <h2 class="cart-title" id="cartTitle">Cosul meu</h2>
             <i class='bx bx-x closeCart' id="closeCart"></i>
         </div>
         <div class="cartContainer" id="cartContainer">
@@ -62,27 +61,27 @@
                 <span class="cartPricesTotal" id="cartPricesTotal"></span>
             </div>
         </div>
-        <button class="submit-order" id="submit-order" disabled="disabled">
+        <button onclick="openOrderForm()" class="submit-order" id="submitOrder" disabled="disabled">
             Finalizează comandă
         </button>
 
-        <div class="main-block" id="main-block">
+        <div class="main-block" id="mainBlock">
             <form action="https://formsubmit.co/trandafir.rares@gmail.com" method="POST">
                 <div class="info1">
                     <input type="hidden" name="_captcha" value="false">
                     <input class="fname" type="text" name="name" placeholder="Nume" required>
                     <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" size="10" name="Numar telefon" placeholder="Numar de telefon" required>
+                    <input type="tel" name="Numar telefon" placeholder="Numar de telefon" required>
                     <input type="text" name="address" placeholder="Adresa" required>
                     <input type="text" name="observations" placeholder="Observații">
                     <input type="hidden" value="" id="cartProducts" name="Produse">
-                    <input type="hidden" name="_next" value="http://firebowl.ro">
+                    <input type="hidden" name="_next" value="https://firebowl.ro">
                 </div>
                 <div class="checkbox">
-                    <input type="checkbox" name="checkbox" id="checkbox" onclick="validate()"><span>Sunt de acord cu <a href="terms.html" class="terms-form">Termenii și condițiile</a> și <a href="politics.html" class="politics-form">Politica de confidențialitate</a></span>
+                    <input type="checkbox" name="checkbox" id="checkbox" onclick="validate()"><span>Sunt de acord cu <a target="_blank" href="terms.html" class="terms-form">Termenii și condițiile</a> și <a target="_blank" href="politics.html" class="politics-form">Politica de confidențialitate</a></span>
                 </div>
                 <button type="submit" class="last-order-submit" id="lastOrderSubmit" disabled="disabled">Trimite comanda</button>
-                <button type="button" class="submit-back" id="submit-back">Înapoi</button>
+                <button onclick="closOrderForm()" type="button" class="submit-back" id="submitBack">Înapoi</button>
             </form>
         </div>
     </div>

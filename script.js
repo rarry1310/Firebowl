@@ -219,7 +219,7 @@ function createCartCard(id, item, search) {
 
 function generateCart() {
 
-    let submitOrder = document.getElementById('submit-order');
+    let submitOrder = document.getElementById('submitOrder');
 
     if (cart.length !== 0) {
         let article = cart.map((cartItem) => {
@@ -302,38 +302,25 @@ TotalAmount();
 
 // SHOW/HIDE ORDER FORM
 
-let submitOrder = document.getElementById('submit-order');
-let mainBlock = document.getElementById('main-block');
-let submitBack = document.getElementById('submit-back');
+let submitOrder = document.getElementById('submitOrder');
+let mainBlock = document.getElementById('mainBlock');
+let submitBack = document.getElementById('submitBack');
+let cartTitle = document.getElementById('cartTitle');
 
-if(closeCart) [
-    closeCart.addEventListener('click', () => {
-        cartContainer.style.visibility = 'initial';
-        submitOrder.style.visibility = 'hidden';
-    })
-]
-
-if(submitOrder) {
-    submitOrder.addEventListener('click', () => {
-        mainBlock.style.visibility = 'initial';
-        cartContainer.style.visibility = 'hidden';
-        submitOrder.style.visibility = 'hidden';
-        cartContainer.style.position = 'absolute';
-        mainBlock.style.position = 'relative';
-        mainBlock.style.top = '0';
-    })
+function openOrderForm() {
+    cartContainer.style.visibility = "hidden";
+    submitOrder.style.visibility = "hidden"
+    mainBlock.style.visibility = "initial";
+    cartTitle.style.visibility = "hidden";
 }
 
-if(submitBack) {
-    submitBack.addEventListener('click', () => {
-        mainBlock.style.visibility = 'hidden';
-        cartContainer.style.visibility = 'initial';
-        submitOrder.style.visibility = 'initial';
-        cartContainer.style.position = 'relative';
-        checkbox.checked = false;
-        lastOrderSubmit.setAttribute("disabled", "");
-    })
+function closOrderForm() {
+    cartContainer.style.visibility = "initial";
+    submitOrder.style.visibility = "initial"
+    mainBlock.style.visibility = "hidden";
+    cartTitle.style.visibility = "initial";
 }
+
 
 // ADD PRODUCTS TO FORM
 
@@ -346,16 +333,10 @@ addProductsToForm();
 
 
 let allInputs = document.querySelectorAll("input");
+
 let lastOrderSubmit = document.getElementById('lastOrderSubmit');
-lastOrderSubmit.addEventListener('click' , (e) => {
-    if(allInputs.innerHTML.trim() == "") {
-        return;
-    }
-    else {
-        localStorage.clear();
-        window.alert("Comanda a fost plasată");
-        body.style.overflow = "visible";
-    }
+lastOrderSubmit.addEventListener('click' , () => {
+    localStorage.clear();
 })
 
 // DISABLE/ENABLE TRIMITE COMANDA
@@ -370,6 +351,3 @@ function validate() {
         lastOrderSubmit.setAttribute("disabled", "");
     }
 }
-
-
-
